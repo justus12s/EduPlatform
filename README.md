@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeIgniter 4 Development
 
 [![PHPUnit](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpunit.yml/badge.svg)](https://github.com/codeigniter4/CodeIgniter4/actions/workflows/test-phpunit.yml)
@@ -107,3 +108,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 ## Running CodeIgniter Tests
 
 Information on running the CodeIgniter test suite can be found in the [README.md](tests/README.md) file in the tests directory.
+=======
+# EduPlatform
+Site Web de gestion universitaire
+>>>>>>> e6b8d597c5692dabfe1df84fb7cf974b4699424a
