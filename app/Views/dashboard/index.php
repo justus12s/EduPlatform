@@ -72,55 +72,30 @@
                 d-block d-md-none
               " href="<?= base_url() ?>javascript:void(0)"><i class="ti-menu ti-close"></i></a>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Logo -->
-        <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-          <!-- ============================================================== -->
-          <!-- Right side toggle and nav items -->
-          <!-- ============================================================== -->
+        <div class="navbar-collapse collapse bg-light" id="navbarSupportedContent" data-navbarbg="skin5">
           <ul class="navbar-nav ms-auto d-flex align-items-center">
-            <!-- ============================================================== -->
-            <!-- Search -->
-            <!-- ============================================================== -->
-            <li class="in">
-              <form role="search" class="app-search d-none d-md-block me-3">
-                <input type="text" placeholder="Search..." class="form-control mt-0" />
-                <a href="<?= base_url() ?>" class="active">
-                  <i class="fa fa-search"></i>
-                </a>
-              </form>
-            </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
             <li>
               <a class="profile-pic" href="<?= base_url() ?>#">
-                <img src="<?= base_url() ?>plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle" /><span
-                  class="text-white font-medium">Steave</span></a>
+                <span
+                  class="text-white font-medium">Jonh Doe</span>
+                <img src="<?= base_url() ?>plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle" /></a>
             </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
+            <li>
+              <a href="#" class="btn btn-light">
+                <i class="fa fa-sign-out-alt"></i> Déconnexion
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
+
     <aside class="left-sidebar" data-sidebarbg="skin6">
-      <!-- Sidebar scroll-->
       <div class="scroll-sidebar">
-        <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
           <ul id="sidebarnav">
-            <!-- User Profile-->
             <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link bg-dark rounded-3 text-white" href="<?= site_url() ?>dashboard/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Dashboard</span>
               </a>
@@ -135,160 +110,72 @@
               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/basic_table"
                 aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
-                <span class="hide-menu">Basic Table</span>
+                <span class="hide-menu">My courses</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/fontawesome"
                 aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
-                <span class="hide-menu">Icon</span>
+                <span class="hide-menu">My notes</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/map_google" aria-expanded="false">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-                <span class="hide-menu">Google Map</span>
-              </a>
+              <div class="bg-info opacity-25 m-2 p-2 rounded-3">
+                <h4>UNSTIM Abomey</h4>
+                <p>Année académique : 2025-2026</p>
+                <p>Semestre 5</p>
+                <p>Période : Octobre 2025</p>
+              </div>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/blank" aria-expanded="false">
-                <i class="fa fa-columns" aria-hidden="true"></i>
-                <span class="hide-menu">Blank Page</span>
+              <a href="#" class="sidebar-link waves-effect waves-dark sidebar-link">
+                <i class="fa fa-sign-out-alt"></i> Déconnexion
               </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/404" aria-expanded="false">
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                <span class="hide-menu">Error 404</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/authentication_login" aria-expanded="false">
-                <i class="fas fa-arrow-alt-circle-right" aria-hidden="true"></i>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/authentication_register" aria-expanded="false">
-                <i class=" far fa-registered" aria-hidden="true"></i>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="text-center p-20 upgrade-btn">
-              <a href="<?= base_url() ?>https://www.wrappixel.com/templates/ampleadmin/?ref=33" class="btn d-grid btn-danger text-white"
-                target="_blank">
-                Upgrade to Pro</a>
             </li>
           </ul>
         </nav>
-        <!-- End Sidebar navigation -->
       </div>
-      <!-- End Sidebar scroll-->
     </aside>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
     <div class="page-wrapper">
-      <!-- ============================================================== -->
-      <!-- Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
-      <div class="page-breadcrumb bg-white">
-        <div class="row align-items-center">
-          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Dashboard</h4>
+      <div class="bg-primary rounded-3 pt-5 p-3 mx-3 text-white">
+        <div class="row">
+          <div class="col-lg-9 col-md-6 col-8">
+            <h2>Marie Dubois</h2>
+            <p>ID : 81020STI24</p>
+            <p>Ingénieur GMM 1 Semestre 5</p>
           </div>
-          <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-            <div class="d-md-flex">
-              <ol class="breadcrumb ms-auto">
-                <li><a href="<?= base_url() ?>#" class="fw-normal">Dashboard</a></li>
-              </ol>
-              <a href="<?= base_url() ?>https://www.wrappixel.com/templates/ampleadmin/?ref=33" target="_blank" class="
-                    btn btn-danger
-                    d-none d-md-block
-                    pull-right
-                    ms-3
-                    hidden-xs hidden-sm
-                    waves-effect waves-light
-                    text-white
-                  ">Upgrade to Pro</a>
-            </div>
+          <div class="col-lg-3 col-md-6 col-4">
+            <h4>Moyenne générale</h4>
+            <h2>15.6/20</h2>
           </div>
         </div>
         <!-- /.col-lg-12 -->
       </div>
-      <!-- ============================================================== -->
-      <!-- End Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
-      <!-- ============================================================== -->
-      <!-- Container fluid  -->
-      <!-- ============================================================== -->
-      <div class="container-fluid">
-        <!-- ============================================================== -->
-        <!-- Three charts -->
-        <!-- ============================================================== -->
-        <div class="row justify-content-center">
-          <div class="col-lg-4 col-md-12">
+      <div class="container-fluid text-center">
+        <div class="row">
+          <div class="col-lg-3 col-md-12">
             <div class="white-box analytics-info">
-              <h3 class="box-title">Total Visit</h3>
-              <ul class="list-inline two-part d-flex align-items-center mb-0">
-                <li>
-                  <div id="sparklinedash">
-                    <canvas width="67" height="30" style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "></canvas>
-                  </div>
-                </li>
-                <li class="ms-auto">
-                  <span class="counter text-success">659</span>
-                </li>
-              </ul>
+              <p>Cours actifs</p>
+              <h1 class="box-title">6</h1>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-3 col-md-12">
             <div class="white-box analytics-info">
-              <h3 class="box-title">Total Page Views</h3>
-              <ul class="list-inline two-part d-flex align-items-center mb-0">
-                <li>
-                  <div id="sparklinedash2">
-                    <canvas width="67" height="30" style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "></canvas>
-                  </div>
-                </li>
-                <li class="ms-auto">
-                  <span class="counter text-purple">869</span>
-                </li>
-              </ul>
+              <p>Crédits obtenus</p>
+              <h1 class="box-title">45/60</h1>
             </div>
           </div>
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-3 col-md-12">
             <div class="white-box analytics-info">
-              <h3 class="box-title">Unique Visitor</h3>
-              <ul class="list-inline two-part d-flex align-items-center mb-0">
-                <li>
-                  <div id="sparklinedash3">
-                    <canvas width="67" height="30" style="
-                          display: inline-block;
-                          width: 67px;
-                          height: 30px;
-                          vertical-align: top;
-                        "></canvas>
-                  </div>
-                </li>
-                <li class="ms-auto">
-                  <span class="counter text-info">911</span>
-                </li>
-              </ul>
+              <p>Cours aujourd'hui</p>
+              <h1 class="box-title">2</h1>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12">
+            <div class="white-box analytics-info">
+              <p>Devoirs en retard</p>
+              <h1 class="box-title">3</h1>
             </div>
           </div>
         </div>

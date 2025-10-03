@@ -22,8 +22,8 @@
         }
 
         .profile-card:hover {
-            transform: translateY(-5px);
-            background-color: rgba(0, 0, 0, 0.05);
+            transform: translateY(-15px);
+            background-color: rgba(120, 231, 116, 0.5);
         }
 
         .icon-circle {
