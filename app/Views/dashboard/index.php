@@ -20,6 +20,61 @@
   <link rel="stylesheet" href="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" />
   <!-- Custom CSS -->
   <link href="<?= base_url() ?>css/style.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .present {
+      background-color: rgba(135, 122, 170, 0.1);
+      border-radius: 20px;
+      padding: 15px;
+      margin: 5px;
+    }
+
+    .icon-big {
+      font-size: 40px;
+      /* icône plus grande */
+      font-weight: 700;
+      /* icône "gras" */
+      border-radius: 50%;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(252, 251, 251, 0.1);
+      transition: 0.3s;
+    }
+
+    .icon-big:hover {
+      background-color: rgba(93, 210, 214, 0.2);
+    }
+
+    .box-title {
+      font-size: 28px;
+      /* texte plus gros */
+      font-weight: 700;
+      /* texte gras */
+      margin: 0;
+    }
+
+    .present p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .sidebar-info {
+      background-color: rgba(69, 5, 247, 0.2);
+      border-radius: 15px;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 220px;
+    }
+
+    @media (max-width: 1170px) {
+      .sidebar-info {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -41,7 +96,7 @@
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <header class="topbar" data-navbarbg="skin5">
-      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+      <nav class="navbar top-navbar navbar-expand-md navbar">
         <div class="navbar-header" data-logobg="skin6">
           <!-- ============================================================== -->
           <!-- Logo -->
@@ -52,8 +107,6 @@
               <!-- Dark Logo icon -->
               <img src="<?= base_url() ?>plugins/images/favicon.png" width="40px" height="40px" alt="homepage" />
             </b>
-            <!--End Logo icon -->
-            <!-- Logo text -->
             <span class="logo-text">
               <!-- dark Logo text -->
               <img src="<?= base_url() ?>plugins/images/logo-text.png" width="180px" height="80px" alt="homepage" />
@@ -75,10 +128,14 @@
         <div class="navbar-collapse collapse bg-light" id="navbarSupportedContent" data-navbarbg="skin5">
           <ul class="navbar-nav ms-auto d-flex align-items-center">
             <li>
-              <a class="profile-pic" href="<?= base_url() ?>#">
-                <span
-                  class="text-white font-medium">Jonh Doe</span>
-                <img src="<?= base_url() ?>plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle" /></a>
+              <div class="row g-0">
+                <div class="col">
+                  <h4 class="text-black fw-bold fs-5">Marie Dubois</h4>
+                  <p>Etudiant</p>
+                </div>
+                <div class="col"><a class="profile-pic" href="<?= base_url() ?>#">
+                    <img src="<?= base_url() ?>plugins/images/users/varun.jpg" alt="user-img" width="60" class="img-circle" /></a></div>
+              </div>
             </li>
             <li>
               <a href="#" class="btn btn-light">
@@ -95,7 +152,7 @@
         <nav class="sidebar-nav">
           <ul id="sidebarnav">
             <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link bg-dark rounded-3 text-white" href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Dashboard</span>
               </a>
@@ -121,24 +178,26 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <div class="bg-info opacity-25 m-2 p-2 rounded-3">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/fontawesome"
+                aria-expanded="false">
+                <i class="fa fa-sign-out-alt" aria-hidden="true"></i>
+                <span class="hide-menu">Déconnexion</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <div class="sidebar-info">
                 <h4>UNSTIM Abomey</h4>
                 <p>Année académique : 2025-2026</p>
                 <p>Semestre 5</p>
                 <p>Période : Octobre 2025</p>
               </div>
             </li>
-            <li class="sidebar-item">
-              <a href="#" class="sidebar-link waves-effect waves-dark sidebar-link">
-                <i class="fa fa-sign-out-alt"></i> Déconnexion
-              </a>
-            </li>
           </ul>
         </nav>
       </div>
     </aside>
     <div class="page-wrapper">
-      <div class="bg-primary rounded-3 pt-5 p-3 mx-3 text-white">
+      <div class="bg-primary bg-opacity-10 rounded-3 pt-5 p-3 mx-3 text-white">
         <div class="row">
           <div class="col-lg-9 col-md-6 col-8">
             <h2>Marie Dubois</h2>
@@ -154,54 +213,39 @@
       </div>
       <div class="container-fluid text-center">
         <div class="row">
-          <div class="col-lg-3 col-md-12">
-            <div class="white-box analytics-info">
-              <p>Cours actifs</p>
-              <h1 class="box-title">6</h1>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-12">
-            <div class="white-box analytics-info">
-              <p>Crédits obtenus</p>
-              <h1 class="box-title">45/60</h1>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-12">
-            <div class="white-box analytics-info">
-              <p>Cours aujourd'hui</p>
-              <h1 class="box-title">2</h1>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-12">
-            <div class="white-box analytics-info">
-              <p>Devoirs en retard</p>
-              <h1 class="box-title">3</h1>
-            </div>
-          </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- PRODUCTS YEARLY SALES -->
-        <!-- ============================================================== -->
-        <div class="row">
-          <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-            <div class="white-box">
-              <h3 class="box-title">Products Yearly Sales</h3>
-              <div class="d-md-flex">
-                <ul class="list-inline d-flex ms-auto">
-                  <li class="ps-3">
-                    <h5><i class="fa fa-circle me-1 text-info"></i>Mac</h5>
-                  </li>
-                  <li class="ps-3">
-                    <h5>
-                      <i class="fa fa-circle me-1 text-inverse"></i>Windows
-                    </h5>
-                  </li>
-                </ul>
+          <div class="col-lg-2 col-md-12 present">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
+              <div class="col-10">
+                <p>Cours actifs</p>
+                <h1 class="box-title">6</h1>
               </div>
-              <div id="ct-visits" style="height: 405px">
-                <div class="chartist-tooltip" style="top: -17px; left: -12px">
-                  <span class="chartist-tooltip-value">6</span>
-                </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
+              <div class="col-10">
+                <p>Crédits obtenus</p>
+                <h1 class="box-title">45/60</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
+              <div class="col-10">
+                <p>Cours aujourd'hui</p>
+                <h1 class="box-title">2</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-2 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
+              <div class="col-10">
+                <p>Devoirs en retard</p>
+                <h1 class="box-title">3</h1>
               </div>
             </div>
           </div>
@@ -520,6 +564,25 @@
   <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
   <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
   <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("sidebarToggle");
+    const sidebar = document.getElementById("sidebarMenu");
+    const overlay = document.getElementById("overlay");
+
+    // Afficher / cacher la sidebar
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("show-sidebar");
+      overlay.classList.toggle("show");
+    });
+
+    // Cacher la sidebar si on clique sur l'overlay
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("show-sidebar");
+      overlay.classList.remove("show");
+    });
+  </script>
 </body>
 
 </html>
