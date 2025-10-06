@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="fr">
 
 <head>
   <meta charset="utf-8" />
@@ -14,15 +14,134 @@
   <title>EduPlatform | Système de Gestion Universitaire</title>
   <link rel="canonical" href="<?= base_url() ?>https://www.wrappixel.com/templates/ample-admin-lite/" />
   <!-- Favicon icon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>plugins/images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url() ?>plugins/images/favicon1.png" />
+  <!-- Custom CSS -->
+  <link href="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" />
   <!-- Custom CSS -->
   <link href="<?= base_url() ?>css/style.min.css" rel="stylesheet" />
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="<?= base_url() ?>https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="<?= base_url() ?>https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    .present {
+      background-color: rgba(135, 122, 170, 0.1);
+      border-radius: 20px;
+      padding: 10px;
+      margin: 5px;
+      width: 23%;
+    }
+
+    .icon-big {
+      font-size: 40px;
+      font-weight: 700;
+      border-radius: 40%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(189, 121, 121, 0.1);
+      transition: 0.3s;
+    }
+
+    .icon-big:hover {
+      background-color: rgba(84, 225, 230, 0.2);
+    }
+
+    .box-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .present p {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .present:hover {
+      transform: translateY(-5px);
+    }
+
+    .info {
+      background-color: rgba(99, 54, 223, 0.5);
+      border-radius: 20px;
+      color: white;
+      margin: 20px 10px 10px 10px;
+      padding: 20px 10px 0 20px;
+      font-family: "Manrope", sans-serif;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .coul {
+      background-color: rgba(80, 78, 85, 0.1);
+      border-radius: 10px;
+    }
+
+    .coul:hover {
+      background-color: rgba(80, 78, 85, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .note {
+      background-color: rgba(156, 190, 241, 0.1);
+      border-radius: 10px;
+    }
+
+    .note:hover {
+      background-color: rgba(60, 199, 241, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .sidebar-info {
+      background-color: rgba(69, 5, 247, 0.2);
+      border-radius: 15px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 10px;
+      margin: 10px auto;
+      max-width: 220px;
+    }
+
+    .hear {
+      display: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+    }
+
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      margin: 4px;
+      background-color: #f4f6faff;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 1170px) {
+      aside.left-sidebar {
+        display: none !important;
+      }
+
+      .present {
+        width: 100%;
+      }
+
+      .hear {
+        display: block !important;
+      }
+
+      header.topbar {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -44,19 +163,17 @@
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <header class="topbar" data-navbarbg="skin5">
-      <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-        <div class="navbar-header" data-logobg="skin6">
+      <nav class="navbar top-navbar navbar-expand-lg">
+        <div class="navbar-header d-flex justify-content-between align-items-center w-100" data-logobg="skin6">
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
-          <a class="navbar-brand" href="<?= site_url() ?>dashboard/index">
+          <a class="logo-text" href="<?= site_url() ?>dashboard/index">
             <!-- Logo icon -->
             <b class="favicon">
               <!-- Dark Logo icon -->
               <img src="<?= base_url() ?>plugins/images/favicon.png" width="40px" height="40px" alt="homepage" />
             </b>
-            <!--End Logo icon -->
-            <!-- Logo text -->
             <span class="logo-text">
               <!-- dark Logo text -->
               <img src="<?= base_url() ?>plugins/images/logo-text.png" width="180px" height="80px" alt="homepage" />
@@ -74,281 +191,343 @@
                 text-dark
                 d-block d-md-none
               " href="<?= base_url() ?>javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-        </div>
-        <!-- ============================================================== -->
-        <!-- End Logo -->
-        <!-- ============================================================== -->
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-          <ul class="navbar-nav d-none d-md-block d-lg-none">
-            <li class="nav-item">
-              <a class="
-                    nav-toggler nav-link
-                    waves-effect waves-light
-                    text-white
-                  " href="<?= base_url() ?>javascript:void(0)"><i class="ti-menu ti-close"></i></a>
-            </li>
-          </ul>
-          <!-- ============================================================== -->
-          <!-- Right side toggle and nav items -->
-          <!-- ============================================================== -->
           <ul class="navbar-nav ms-auto d-flex align-items-center">
-            <!-- ============================================================== -->
-            <!-- Search -->
-            <!-- ============================================================== -->
-            <li class="in">
-              <form role="search" class="app-search d-none d-md-block me-3">
-                <input type="text" placeholder="Search..." class="form-control mt-0" />
-                <a href="<?= base_url() ?>" class="active">
-                  <i class="fa fa-search"></i>
-                </a>
-              </form>
-            </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
             <li>
-              <a class="profile-pic" href="<?= base_url() ?>#">
-                <img src="<?= base_url() ?>plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle" /><span
-                  class="text-white font-medium">Steave</span></a>
+              <div class="row g-0">
+                <div class="col">
+                  <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
+                </div>
+                <div class="col">
+                  <a href=""><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
+                </div>
+              </div>
             </li>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
           </ul>
         </div>
       </nav>
     </header>
-    <!-- ============================================================== -->
-    <!-- End Topbar header -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <aside class="left-sidebar" data-sidebarbg="skin6">
-      <!-- Sidebar scroll-->
+
+    <div class="hear">
+      <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+            <i class="far fa-clock me-1"></i> Tableau de bord
+          </a>
+
+          <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMobile"
+            aria-controls="mainNavbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNavbarMobile">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                  <i class="fa fa-user me-1"></i> Profil
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/basic_table">
+                  <i class="fa fa-book me-1"></i> Mes cours
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/fontawesome">
+                  <i class="fa fa-font me-1"></i> Mes notes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-danger" href="<?= site_url() ?>auth/logout">
+                  <i class="fa fa-sign-out-alt me-1"></i> Déconnection
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <aside class="left-sidebar collapse d-md-block bg-light" data-sidebarbg="skin6">
       <div class="scroll-sidebar">
-        <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
           <ul id="sidebarnav">
-            <!-- User Profile-->
             <li class="sidebar-item pt-2">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>dashboard/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
-                <span class="hide-menu">Dashboard</span>
+                <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="hide-menu">Profile</span>
+                <span class="hide-menu">Profil</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/basic_table"
-                aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>dashboard/basic_table" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
-                <span class="hide-menu">Basic Table</span>
+                <span class="hide-menu">Mes cours</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/fontawesome"
-                aria-expanded="false">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>dashboard/fontawesome" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
-                <span class="hide-menu">Icon</span>
+                <span class="hide-menu">Mes notes</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/map_google" aria-expanded="false">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-                <span class="hide-menu">Google Map</span>
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>auth/logout" aria-expanded="false">
+                <i class="fa fa-sign-out-alt" aria-hidden="true"></i>
+                <span class="hide-menu">Déconnection</span>
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/blank" aria-expanded="false">
-                <i class="fa fa-columns" aria-hidden="true"></i>
-                <span class="hide-menu">Blank Page</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/404" aria-expanded="false">
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                <span class="hide-menu">Error 404</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/authentication_login" aria-expanded="false">
-                <i class="fas fa-arrow-alt-circle-right" aria-hidden="true"></i>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?= site_url() ?>dashboard/authentication_register" aria-expanded="false">
-                <i class=" far fa-registered" aria-hidden="true"></i>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="text-center p-20 upgrade-btn">
-              <a href="<?= base_url() ?>https://www.wrappixel.com/templates/ampleadmin/?ref=33" class="btn d-grid btn-danger text-white"
-                target="_blank">
-                Upgrade to Pro</a>
+              <div class="sidebar-info">
+                <h4 class="fs-5 fw-bold text-dark">UNSTIM Abomey</h4>
+                <p>Année académique : 2025-2026</p>
+                <p>Semestre 5</p>
+                <p>Période : Octobre 2025</p>
+              </div>
             </li>
           </ul>
         </nav>
-        <!-- End Sidebar navigation -->
       </div>
-      <!-- End Sidebar scroll-->
     </aside>
-    <!-- ============================================================== -->
-    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Page wrapper  -->
-    <!-- ============================================================== -->
     <div class="page-wrapper">
-      <!-- ============================================================== -->
-      <!-- Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
-      <div class="page-breadcrumb bg-white">
-        <div class="row align-items-center">
-          <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-            <h4 class="page-title">Profile page</h4>
+      <div class="info">
+        <div class="row">
+          <div class="col-lg-9 col-md-8 col-8">
+            <h2>Marie Dubois</h2>
+            <p>ID : 81020STI24</p>
+            <p>Ingénieur GMM 1 Semestre 5</p>
           </div>
-          <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
-            <div class="d-md-flex">
-              <ol class="breadcrumb ms-auto">
-                <li><a href="<?= base_url() ?>#" class="fw-normal">Dashboard</a></li>
-              </ol>
-              <a href="<?= base_url() ?>https://www.wrappixel.com/templates/ampleadmin/?ref=33" target="_blank" class="
-                    btn btn-danger
-                    d-none d-md-block
-                    pull-right
-                    ms-3
-                    hidden-xs hidden-sm
-                    waves-effect waves-light
-                    text-white
-                  ">Upgrade to Pro</a>
-            </div>
+          <div class="col-lg-3 col-md-4 col-4">
+            <h3>Moyenne générale</h3>
+            <h1>15.6/20</h1>
           </div>
         </div>
         <!-- /.col-lg-12 -->
       </div>
-      <!-- ============================================================== -->
-      <!-- End Bread crumb and right sidebar toggle -->
-      <!-- ============================================================== -->
-      <!-- ============================================================== -->
-      <!-- Container fluid  -->
-      <!-- ============================================================== -->
-      <div class="container-fluid">
-        <!-- ============================================================== -->
-        <!-- Start Page Content -->
-        <!-- ============================================================== -->
-        <!-- Row -->
+      <div class="container-fluid w-100 text-center">
         <div class="row">
-          <!-- Column -->
-          <div class="col-lg-4 col-xlg-3 col-md-12">
-            <div class="white-box">
-              <div class="user-bg">
-                <img width="100%" alt="user" src="plugins/images/large/img1.jpg" />
-                <div class="overlay-box">
-                  <div class="user-content">
-                    <a href="<?= base_url() ?>javascript:void(0)"><img src="<?= base_url() ?>plugins/images/users/genu.jpg" class="thumb-lg img-circle"
-                        alt="img" /></a>
-                    <h4 class="text-white mt-2">User Name</h4>
-                    <h5 class="text-white mt-2">info@myadmin.com</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="user-btm-box mt-5 d-md-flex">
-                <div class="col-md-4 col-sm-4 text-center">
-                  <h1>258</h1>
-                </div>
-                <div class="col-md-4 col-sm-4 text-center">
-                  <h1>125</h1>
-                </div>
-                <div class="col-md-4 col-sm-4 text-center">
-                  <h1>556</h1>
-                </div>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
+              <div class="col-lg-10 col-8">
+                <p>Cours actifs</p>
+                <h1 class="box-title">6</h1>
               </div>
             </div>
           </div>
-          <!-- Column -->
-          <!-- Column -->
-          <div class="col-lg-8 col-xlg-9 col-md-12">
-            <div class="card">
-              <div class="card-body">
-                <form class="form-horizontal form-material">
-                  <div class="form-group mb-4">
-                    <label class="col-md-12 p-0">Full Name</label>
-                    <div class="col-md-12 border-bottom p-0">
-                      <input type="text" placeholder="Johnathan Doe" class="form-control p-0 border-0" />
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label for="example-email" class="col-md-12 p-0">Email</label>
-                    <div class="col-md-12 border-bottom p-0">
-                      <input type="email" placeholder="johnathan@admin.com" class="form-control p-0 border-0"
-                        name="example-email" id="example-email" />
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label class="col-md-12 p-0">Password</label>
-                    <div class="col-md-12 border-bottom p-0">
-                      <input type="password" value="password" class="form-control p-0 border-0" />
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label class="col-md-12 p-0">Phone No</label>
-                    <div class="col-md-12 border-bottom p-0">
-                      <input type="text" placeholder="123 456 7890" class="form-control p-0 border-0" />
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label class="col-md-12 p-0">Message</label>
-                    <div class="col-md-12 border-bottom p-0">
-                      <textarea rows="5" class="form-control p-0 border-0"></textarea>
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <label class="col-sm-12">Select Country</label>
-
-                    <div class="col-sm-12 border-bottom">
-                      <select class="
-                            form-select
-                            shadow-none
-                            p-0
-                            border-0
-                            form-control-line
-                          ">
-                        <option>London</option>
-                        <option>India</option>
-                        <option>Usa</option>
-                        <option>Canada</option>
-                        <option>Thailand</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-group mb-4">
-                    <div class="col-sm-12">
-                      <button class="btn btn-success">Update Profile</button>
-                    </div>
-                  </div>
-                </form>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
+              <div class="col-lg-10 col-8">
+                <p>Crédits obtenus</p>
+                <h1 class="box-title">45/60</h1>
               </div>
             </div>
           </div>
-          <!-- Column -->
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
+              <div class="col-lg-10 col-8">
+                <p>Cours aujourd'hui</p>
+                <h1 class="box-title">2</h1>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-12 present">
+            <div class="row">
+              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
+              <div class="col-lg-10 col-8">
+                <p>Devoirs en retard</p>
+                <h1 class="box-title">3</h1>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Row -->
-        <!-- ============================================================== -->
-        <!-- End PAge Content -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Right sidebar -->
-        <!-- ============================================================== -->
-        <!-- .right-sidebar -->
-        <!-- ============================================================== -->
-        <!-- End Right sidebar -->
-        <!-- ============================================================== -->
+
+        <div class="row">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row align-items-center">
+                <div class="col-3 d-flex align-items-center">
+                  <i class="bi px-2 fs-5 fw-bold bi-calendar-date"></i>
+                </div>
+                <div class="col-5">
+                  <h1 class="fs-5 fw-bold mb-0">Cours d'aujourd'hui</h1>
+                </div>
+                <div class="col-4">
+                  <select class="form-select shadow-none">
+                    <option>Octobre 2025</option>
+                    <option>Novembre 2025</option>
+                    <option>Décembre 2025</option>
+                    <option>Janvier 2025</option>
+                    <option>Février 2025</option>
+                    <option>Mars 2025</option>
+                    <option>Avril 2025</option>
+                    <option>Mai 2025</option>
+                    <option>Juin 2025</option>
+                    <option>Juillet 2025</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="col">
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Mathématiques Appliquées</h1>
+                    <p>Cours Magistral</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">08:00-12:00</h1>
+                    <p>Amphi A</p>
+                  </div>
+                </div>
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Physique Qantique</h1>
+                    <p>Travaux Pratiques</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">14:00-15:45</h1>
+                    <p>Salle 205</p>
+                  </div>
+                </div>
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Algorithmique</h1>
+                    <p>Travaux Dirigés</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">16:00-18:00</h1>
+                    <p>Salle Info 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row align-items-center">
+                <div class="col-3 d-flex align-items-center">
+                  <i class="bi px-2 fs-5 fw-bold bi-trophy"></i>
+                </div>
+                <div class="col-9">
+                  <h1 class="fs-5 fw-bold mb-0">Notes récentes</h1>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <div class="col">
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Mathématiques</h1>
+                    <p>Examen final</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">16/20</h1>
+                    <p>12/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Physique</h1>
+                    <p>Projet</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">18/20</h1>
+                    <p>09/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Informatique</h1>
+                    <p>TP Java</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">15/20</h1>
+                    <p>05/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Anglais</h1>
+                    <p>Oral</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">14/20</h1>
+                    <p>01/09/25</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row">
+                <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
+              </div>
+            </div>
+            <div class="">
+              <div class="row p-2">
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Physique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100">
+                      75%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100">
+                      60%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Anglais</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100">
+                      80%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      50%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- ============================================================== -->
       <!-- End Container fluid  -->
@@ -356,9 +535,9 @@
       <!-- ============================================================== -->
       <!-- footer -->
       <!-- ============================================================== -->
-      <footer class="footer text-center">
-        2024 © Ample Admin brought to you by
-        <a href="<?= base_url() ?>https://www.wrappixel.com/">wrappixel.com</a>
+      <footer class="footer h-100 text-dark text-center fw-bold">
+        2025 © DevJustus
+        <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
       </footer>
       <!-- ============================================================== -->
       <!-- End footer -->
@@ -374,16 +553,23 @@
   <!-- ============================================================== -->
   <!-- All Jquery -->
   <!-- ============================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url() ?>plugins/bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap tether Core JavaScript -->
-  <script src="<?= base_url() ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="<?= base_url() ?>js/app-style-switcher.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
   <!--Wave Effects -->
   <script src="<?= base_url() ?>js/waves.js"></script>
   <!--Menu sidebar -->
   <script src="<?= base_url() ?>js/sidebarmenu.js"></script>
   <!--Custom JavaScript -->
   <script src="<?= base_url() ?>js/custom.js"></script>
+  <!--This page JavaScript -->
+  <!--chartis chart-->
+  <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+  <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
+
 </body>
 
 </html>

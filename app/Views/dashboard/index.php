@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="fr">
 
 <head>
   <meta charset="utf-8" />
@@ -20,29 +20,33 @@
   <link rel="stylesheet" href="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css" />
   <!-- Custom CSS -->
   <link href="<?= base_url() ?>css/style.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     .present {
       background-color: rgba(135, 122, 170, 0.1);
       border-radius: 20px;
-      padding: 15px;
+      padding: 10px;
       margin: 5px;
+      width: 23%;
     }
 
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 50%;
-      padding: 15px;
+      border-radius: 40%;
+      padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(252, 251, 251, 0.1);
+      background-color: rgba(189, 121, 121, 0.1);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(93, 210, 214, 0.2);
+      background-color: rgba(84, 225, 230, 0.2);
     }
 
     .box-title {
@@ -57,25 +61,89 @@
       font-weight: 600;
     }
 
+    .present:hover {
+      transform: translateY(-5px);
+    }
+
+    .info {
+      background-color: rgba(99, 54, 223, 0.5);
+      border-radius: 20px;
+      color: white;
+      margin: 20px 10px 10px 10px;
+      padding: 20px 10px 0 20px;
+      font-family: "Manrope", sans-serif;
+      font-size: large;
+      font-weight: bold;
+    }
+
+    .coul {
+      background-color: rgba(80, 78, 85, 0.1);
+      border-radius: 10px;
+    }
+
+    .coul:hover {
+      background-color: rgba(80, 78, 85, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .note {
+      background-color: rgba(156, 190, 241, 0.1);
+      border-radius: 10px;
+    }
+
+    .note:hover {
+      background-color: rgba(60, 199, 241, 0.3);
+      transform: translateY(-5px);
+    }
+
     .sidebar-info {
       background-color: rgba(69, 5, 247, 0.2);
       border-radius: 15px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 12px;
       padding: 10px;
       margin: 10px auto;
       max-width: 220px;
     }
 
+    .hear {
+      display: none;
+    }
+
+    .navbar-toggler-icon {
+      background-image: none;
+    }
+
+    .navbar-toggler span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      margin: 4px;
+      background-color: #f4f6faff;
+      border-radius: 2px;
+    }
+
     @media (max-width: 1170px) {
-      .sidebar-info {
+      aside.left-sidebar {
+        display: none !important;
+      }
+
+      .present {
+        width: 100%;
+      }
+
+      .hear {
+        display: block !important;
+      }
+
+      header.topbar {
         display: none;
       }
 
-      .scroll-sidebar {
-        display: none;
-      }
-
-      .navbar {
-        display: none;
+      .page-wrapper {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
       }
     }
   </style>
@@ -100,7 +168,7 @@
     <!-- Topbar header - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <header class="topbar" data-navbarbg="skin5">
-      <nav class="navbar top-navbar navbar-expand-md">
+      <nav class="navbar top-navbar navbar-expand-lg">
         <div class="navbar-header d-flex justify-content-between align-items-center w-100" data-logobg="skin6">
           <!-- ============================================================== -->
           <!-- Logo -->
@@ -132,16 +200,57 @@
             <li>
               <div class="row g-0">
                 <div class="col">
-                  <h3 class="text-black fw-bold fs-5">Marie Dubois</h3>
+                  <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
                 </div>
-                <div class="col"><a href="<?= base_url() ?>#">
-                    <img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="60" class="img img-circle" /></a></div>
+                <div class="col">
+                  <a href="<?= site_url() ?>dashboard/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
+                </div>
               </div>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <div class="hear">
+      <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+            <i class="far fa-clock me-1"></i> Tableau de bord
+          </a>
+
+          <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMobile"
+            aria-controls="mainNavbarMobile" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainNavbarMobile">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                  <i class="fa fa-user me-1"></i> Profil
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/basic_table">
+                  <i class="fa fa-book me-1"></i> Mes cours
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/fontawesome">
+                  <i class="fa fa-font me-1"></i> Mes notes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-danger" href="<?= site_url() ?>auth/logout">
+                  <i class="fa fa-sign-out-alt me-1"></i> Déconnection
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
 
     <aside class="left-sidebar collapse d-md-block bg-light" data-sidebarbg="skin6">
       <div class="scroll-sidebar">
@@ -151,40 +260,40 @@
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
                 href="<?= site_url() ?>dashboard/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
-                <span class="hide-menu">Dashboard</span>
+                <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
                 href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="hide-menu">Profile</span>
+                <span class="hide-menu">Profil</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
                 href="<?= site_url() ?>dashboard/basic_table" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
-                <span class="hide-menu">My courses</span>
+                <span class="hide-menu">Mes cours</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
                 href="<?= site_url() ?>dashboard/fontawesome" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
-                <span class="hide-menu">My notes</span>
+                <span class="hide-menu">Mes notes</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
                 href="<?= site_url() ?>auth/logout" aria-expanded="false">
                 <i class="fa fa-sign-out-alt" aria-hidden="true"></i>
-                <span class="hide-menu">Déconnexion</span>
+                <span class="hide-menu">Déconnection</span>
               </a>
             </li>
             <li class="sidebar-item">
               <div class="sidebar-info">
-                <h4>UNSTIM Abomey</h4>
+                <h4 class="fs-5 fw-bold text-dark">UNSTIM Abomey</h4>
                 <p>Année académique : 2025-2026</p>
                 <p>Semestre 5</p>
                 <p>Période : Octobre 2025</p>
@@ -195,7 +304,7 @@
       </div>
     </aside>
     <div class="page-wrapper">
-      <div class="bg-primary bg-opacity-10 rounded-3 pt-5 p-3 mx-3 text-white">
+      <div class="info">
         <div class="row">
           <div class="col-lg-9 col-md-8 col-8">
             <h2>Marie Dubois</h2>
@@ -203,15 +312,15 @@
             <p>Ingénieur GMM 1 Semestre 5</p>
           </div>
           <div class="col-lg-3 col-md-4 col-4">
-            <h4>Moyenne générale</h4>
-            <h2>15.6/20</h2>
+            <h3>Moyenne générale</h3>
+            <h1>15.6/20</h1>
           </div>
         </div>
         <!-- /.col-lg-12 -->
       </div>
-      <div class="container-fluid text-center">
+      <div class="container-fluid w-100 text-center">
         <div class="row">
-          <div class="col-lg-2 col-md-12 present">
+          <div class="col-lg-3 col-md-12 present">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
               <div class="col-lg-10 col-8">
@@ -250,215 +359,221 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12">
-            <div class="white-box p-3">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">
-                  <i class="bi px-2 icon-big text-blue bi-calendar-date"></i>
+                  <i class="bi px-2 fs-5 fw-bold bi-calendar-date"></i>
                 </div>
                 <div class="col-5">
-                  <h1 class="box-title mb-0">Cours aujourd'hui</h1>
+                  <h1 class="fs-5 fw-bold mb-0">Cours d'aujourd'hui</h1>
                 </div>
                 <div class="col-4">
                   <select class="form-select shadow-none">
-                    <option>March 2024</option>
-                    <option>April 2024</option>
-                    <option>May 2024</option>
-                    <option>June 2024</option>
-                    <option>July 2024</option>
+                    <option>Octobre 2025</option>
+                    <option>Novembre 2025</option>
+                    <option>Décembre 2025</option>
+                    <option>Janvier 2025</option>
+                    <option>Février 2025</option>
+                    <option>Mars 2025</option>
+                    <option>Avril 2025</option>
+                    <option>Mai 2025</option>
+                    <option>Juin 2025</option>
+                    <option>Juillet 2025</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="table-responsive">
-              <table class="table no-wrap">
-                <thead>
-                  <tr>
-                    <th class="border-top-0">#</th>
-                    <th class="border-top-0">Name</th>
-                    <th class="border-top-0">Status</th>
-                    <th class="border-top-0">Date</th>
-                    <th class="border-top-0">Price</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td class="txt-oflo">Elite admin</td>
-                    <td>SALE</td>
-                    <td class="txt-oflo">April 18, 2024</td>
-                    <td><span class="text-success">$24</span></td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td class="txt-oflo">Real Homes WP Theme</td>
-                    <td>EXTENDED</td>
-                    <td class="txt-oflo">April 19, 2024</td>
-                    <td><span class="text-info">$1250</span></td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td class="txt-oflo">Ample Admin</td>
-                    <td>EXTENDED</td>
-                    <td class="txt-oflo">April 19, 2024</td>
-                    <td><span class="text-info">$1250</span></td>
-                  </tr>
-                  <tr>
-                    <td>4</td>
-                    <td class="txt-oflo">Medical Pro WP Theme</td>
-                    <td>TAX</td>
-                    <td class="txt-oflo">April 20, 2024</td>
-                    <td><span class="text-danger">-$24</span></td>
-                  </tr>
-                  <tr>
-                    <td>5</td>
-                    <td class="txt-oflo">Hosting press html</td>
-                    <td>SALE</td>
-                    <td class="txt-oflo">April 21, 2024</td>
-                    <td><span class="text-success">$24</span></td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td class="txt-oflo">Digital Agency PSD</td>
-                    <td>SALE</td>
-                    <td class="txt-oflo">April 23, 2024</td>
-                    <td><span class="text-danger">-$14</span></td>
-                  </tr>
-                  <tr>
-                    <td>7</td>
-                    <td class="txt-oflo">Helping Hands WP Theme</td>
-                    <td>MEMBER</td>
-                    <td class="txt-oflo">April 22, 2024</td>
-                    <td><span class="text-success">$64</span></td>
-                  </tr>
-                </tbody>
-              </table>
+            <div class="">
+              <div class="col">
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Mathématiques Appliquées</h1>
+                    <p>Cours Magistral</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">08:00-12:00</h1>
+                    <p>Amphi A</p>
+                  </div>
+                </div>
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Physique Qantique</h1>
+                    <p>Travaux Pratiques</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">14:00-15:45</h1>
+                    <p>Salle 205</p>
+                  </div>
+                </div>
+                <div class="row coul p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Algorithmique</h1>
+                    <p>Travaux Dirigés</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="fs-5 fw-bold">16:00-18:00</h1>
+                    <p>Salle Info 1</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12">
-            <div class="white-box">
-              <div class="d-md-flex mb-3">
-                <h3 class="box-title mb-0">Recent sales</h3>
-                <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
-                  <select class="form-select shadow-none row border-top">
-                    <option>March 2024</option>
-                    <option>April 2024</option>
-                    <option>May 2024</option>
-                    <option>June 2024</option>
-                    <option>July 2024</option>
-                  </select>
+          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row align-items-center">
+                <div class="col-3 d-flex align-items-center">
+                  <i class="bi px-2 fs-5 fw-bold bi-trophy"></i>
+                </div>
+                <div class="col-9">
+                  <h1 class="fs-5 fw-bold mb-0">Notes récentes</h1>
                 </div>
               </div>
-              <div class="table-responsive">
-                <table class="table no-wrap">
-                  <thead>
-                    <tr>
-                      <th class="border-top-0">#</th>
-                      <th class="border-top-0">Name</th>
-                      <th class="border-top-0">Status</th>
-                      <th class="border-top-0">Date</th>
-                      <th class="border-top-0">Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td class="txt-oflo">Elite admin</td>
-                      <td>SALE</td>
-                      <td class="txt-oflo">April 18, 2024</td>
-                      <td><span class="text-success">$24</span></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td class="txt-oflo">Real Homes WP Theme</td>
-                      <td>EXTENDED</td>
-                      <td class="txt-oflo">April 19, 2024</td>
-                      <td><span class="text-info">$1250</span></td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td class="txt-oflo">Ample Admin</td>
-                      <td>EXTENDED</td>
-                      <td class="txt-oflo">April 19, 2024</td>
-                      <td><span class="text-info">$1250</span></td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td class="txt-oflo">Medical Pro WP Theme</td>
-                      <td>TAX</td>
-                      <td class="txt-oflo">April 20, 2024</td>
-                      <td><span class="text-danger">-$24</span></td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td class="txt-oflo">Hosting press html</td>
-                      <td>SALE</td>
-                      <td class="txt-oflo">April 21, 2024</td>
-                      <td><span class="text-success">$24</span></td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td class="txt-oflo">Digital Agency PSD</td>
-                      <td>SALE</td>
-                      <td class="txt-oflo">April 23, 2024</td>
-                      <td><span class="text-danger">-$14</span></td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td class="txt-oflo">Helping Hands WP Theme</td>
-                      <td>MEMBER</td>
-                      <td class="txt-oflo">April 22, 2024</td>
-                      <td><span class="text-success">$64</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+            </div>
+            <div class="">
+              <div class="col">
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Mathématiques</h1>
+                    <p>Examen final</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">16/20</h1>
+                    <p>12/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Physique</h1>
+                    <p>Projet</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">18/20</h1>
+                    <p>09/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Informatique</h1>
+                    <p>TP Java</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">15/20</h1>
+                    <p>05/09/25</p>
+                  </div>
+                </div>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Anglais</h1>
+                    <p>Oral</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">14/20</h1>
+                    <p>01/09/25</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-center">
-          2024 © Ample Admin brought to you by
-          <a href="<?= base_url() ?>https://www.wrappixel.com/">wrappixel.com</a>
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
+        <div class="row">
+          <div class="col-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row">
+                <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
+              </div>
+            </div>
+            <div class="">
+              <div class="row p-2">
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Physique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100">
+                      75%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100">
+                      60%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Anglais</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100">
+                      80%
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      50%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- ============================================================== -->
-      <!-- End Page wrapper  -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <footer class="footer h-100 text-dark text-center fw-bold">
+        2025 © DevJustus
+        <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
+      </footer>
+      <!-- ============================================================== -->
+      <!-- End footer -->
       <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
-    <!-- End Wrapper -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="<?= base_url('assets/js/bootstrap.bundle.min.js') ?>"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?= base_url() ?>bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>js/app-style-switcher.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <!--Wave Effects -->
-    <script src="<?= base_url() ?>js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="<?= base_url() ?>js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="<?= base_url() ?>js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="<?= base_url() ?>js/app-style-switcher.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <!--Wave Effects -->
+  <script src="<?= base_url() ?>js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="<?= base_url() ?>js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="<?= base_url() ?>js/custom.js"></script>
+  <!--This page JavaScript -->
+  <!--chartis chart-->
+  <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+  <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
 
 </body>
 

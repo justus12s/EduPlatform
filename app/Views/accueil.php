@@ -21,9 +21,19 @@
             cursor: pointer;
         }
 
-        .profile-card:hover {
-            transform: translateY(-15px);
-            background-color: rgba(120, 231, 116, 0.5);
+        .admin:hover {
+            transform: translateY(-10px);
+            background-color: rgba(231, 116, 116, 0.2);
+        }
+
+        .student:hover {
+            transform: translateY(-20px);
+            background-color: rgba(102, 137, 233, 0.2);
+        }
+
+        .teacher:hover {
+            transform: translateY(15px);
+            background-color: rgba(116, 231, 126, 0.2);
         }
 
         .icon-circle {
@@ -62,17 +72,17 @@
 
         <div class="row mt-4 g-3 justify-content-center">
             <div class="col-12 col-md-4 col-lg-4">
-                <div class="profile-card">
+                <div class="profile-card admin">
                     <div class="icon-circle icon-admin">
                         <i class="bi bi-shield-fill-check"></i>
                     </div>
                     <h4 class="h1">Administrateur</h4>
-                    <p>Accès complet à la gestion de l'établissement</p>
+                    <p>Gestion complète de l'établissement</p>
                     <a href="<?= site_url('login') ?>" class="btn btn-dark w-100">Se connecter</a>
                 </div>
             </div>
             <div class="col-12 col-md-4 col-lg-4">
-                <div class="profile-card">
+                <div class="profile-card student">
                     <div class="icon-circle icon-student">
                         <i class="bi bi-mortarboard"></i>
                     </div>
@@ -82,7 +92,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-4 col-lg-4">
-                <div class="profile-card">
+                <div class="profile-card teacher">
                     <div class="icon-circle icon-teacher">
                         <i class="bi bi-people-fill"></i>
                     </div>
