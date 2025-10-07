@@ -23,10 +23,10 @@ class Dashboard extends BaseController
     {
         return view('dashboard/fontawesome');
     }
-    
-    public function basic_table(): string
+
+    public function cours(): string
     {
-        return view('dashboard/basic_table');
+        return view('dashboard/cours');
     }
 
     public function map_google(): string

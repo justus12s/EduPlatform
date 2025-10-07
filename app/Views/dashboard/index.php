@@ -232,7 +232,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/basic_table">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
                   <i class="fa fa-book me-1"></i> Mes cours
                 </a>
               </li>
@@ -272,7 +272,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/basic_table" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
                 <span class="hide-menu">Mes cours</span>
               </a>
@@ -359,7 +359,7 @@
         </div>
 
         <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
             <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">
@@ -419,7 +419,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col w-75"></div>
+          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
             <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">

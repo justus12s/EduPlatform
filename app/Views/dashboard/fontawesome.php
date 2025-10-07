@@ -227,7 +227,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/basic_table">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
                   <i class="fa fa-book me-1"></i> Mes cours
                 </a>
               </li>
@@ -267,7 +267,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/basic_table" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
                 <span class="hide-menu">Mes cours</span>
               </a>
