@@ -12,7 +12,7 @@ $routes->get('/register', 'Home::register');
 
 $routes->post('dashboard/index', 'Dashboard::index');
 $routes->get('dashboard/index', 'Dashboard::index');
-$routes->get('dashboard/fontawesome', 'Dashboard::fontawesome');
+$routes->get('dashboard/notes', 'Dashboard::notes');
 $routes->get('dashboard/blank', 'Dashboard::blank');
 $routes->get('dashboard/profile', 'Dashboard::profile');
 $routes->get('dashboard/authentication_login', 'Dashboard::authentication_login');

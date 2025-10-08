@@ -25,14 +25,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    .present {
-      background-color: rgba(135, 122, 170, 0.1);
-      border-radius: 20px;
-      padding: 10px;
-      margin: 5px;
-      width: 23%;
-    }
-
     .icon-big {
       font-size: 40px;
       font-weight: 700;
@@ -41,7 +33,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(189, 121, 121, 0.1);
+      background-color: rgba(240, 230, 230, 0.1);
       transition: 0.3s;
     }
 
@@ -53,47 +45,6 @@
       font-size: 28px;
       font-weight: 700;
       margin: 0;
-    }
-
-    .present p {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .present:hover {
-      transform: translateY(-5px);
-    }
-
-    .info {
-      background-color: rgba(99, 54, 223, 0.5);
-      border-radius: 20px;
-      color: white;
-      margin: 20px 10px 10px 10px;
-      padding: 20px 10px 0 20px;
-      font-family: "Manrope", sans-serif;
-      font-size: large;
-      font-weight: bold;
-    }
-
-    .coul {
-      background-color: rgba(80, 78, 85, 0.1);
-      border-radius: 10px;
-    }
-
-    .coul:hover {
-      background-color: rgba(80, 78, 85, 0.3);
-      transform: translateY(-5px);
-    }
-
-    .note {
-      background-color: rgba(156, 190, 241, 0.1);
-      border-radius: 10px;
-    }
-
-    .note:hover {
-      background-color: rgba(60, 199, 241, 0.3);
-      transform: translateY(-5px);
     }
 
     .sidebar-info {
@@ -124,13 +75,30 @@
       border-radius: 2px;
     }
 
+    .descript {
+      width: 31%;
+      margin: 10px;
+    }
+
+    .note {
+      width: 48%;
+      margin: 5px;
+    }
+
+    .descript h1 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    .descript:hover {
+      transform: translateY(-10px);
+    }
+
+
     @media (max-width: 1170px) {
       aside.left-sidebar {
         display: none !important;
-      }
-
-      .present {
-        width: 100%;
       }
 
       .hear {
@@ -139,6 +107,16 @@
 
       header.topbar {
         display: none;
+      }
+
+      .descript {
+        width: 100%;
+        margin: 0;
+      }
+
+      .note {
+        width: 100%;
+        margin: 0;
       }
     }
   </style>
@@ -232,7 +210,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/fontawesome">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -274,7 +252,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/fontawesome" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>
@@ -299,231 +277,88 @@
       </div>
     </aside>
     <div class="page-wrapper">
-      <div class="info">
-        <div class="row">
-          <div class="col-lg-9 col-md-8 col-8">
-            <h2>Marie Dubois</h2>
-            <p>ID : 81020STI24</p>
-            <p>Ingénieur GMM 1 Semestre 5</p>
+      <div class="container-fluid">
+        <div class="row" class="h-100 fs-5">
+          <div class="col">
+            <h1 class="fw-bold">Mes notes</h1>
+            <p class="text-secondary fs-4">Consultez vos résultats et votre progression académique</p>
           </div>
-          <div class="col-lg-3 col-md-4 col-4">
-            <h3>Moyenne générale</h3>
-            <h1>15.6/20</h1>
+          <div class="col-3 d-flex justify-content-end align-items-center">
+            <p class="fs-5 text-dark fw-bold">Semestre 5</p>
           </div>
         </div>
-        <!-- /.col-lg-12 -->
-      </div>
-      <div class="container-fluid w-100 text-center">
         <div class="row">
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 bg-light border border-3 descript" style="border-radius: 10px;">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
-              <div class="col-lg-10 col-8">
-                <p>Cours actifs</p>
-                <h1 class="box-title">6</h1>
+              <div class="col-8">
+                <p class="text-secondary fs-4">Moyenne générale</p>
+                <h1 class="text-dark">15.6/20</h1>
               </div>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-success bi-graph-up-arrow"></i></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 p-2 bg-light border border-3 descript" style="border-radius: 10px;">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
-              <div class="col-lg-10 col-8">
-                <p>Crédits obtenus</p>
-                <h1 class="box-title">45/60</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-12 present">
-            <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
-              <div class="col-lg-10 col-8">
-                <p>Cours aujourd'hui</p>
-                <h1 class="box-title">2</h1>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-12 present">
-            <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
-              <div class="col-lg-10 col-8">
-                <p>Devoirs en retard</p>
-                <h1 class="box-title">3</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row align-items-center">
-                <div class="col-3 d-flex align-items-center">
-                  <i class="bi px-2 fs-5 fw-bold bi-calendar-date"></i>
-                </div>
-                <div class="col-5">
-                  <h1 class="fs-5 fw-bold mb-0">Cours d'aujourd'hui</h1>
-                </div>
-                <div class="col-4">
-                  <select class="form-select shadow-none">
-                    <option>Octobre 2025</option>
-                    <option>Novembre 2025</option>
-                    <option>Décembre 2025</option>
-                    <option>Janvier 2025</option>
-                    <option>Février 2025</option>
-                    <option>Mars 2025</option>
-                    <option>Avril 2025</option>
-                    <option>Mai 2025</option>
-                    <option>Juin 2025</option>
-                    <option>Juillet 2025</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="">
               <div class="col">
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Mathématiques Appliquées</h1>
-                    <p>Cours Magistral</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">08:00-12:00</h1>
-                    <p>Amphi A</p>
-                  </div>
-                </div>
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Physique Qantique</h1>
-                    <p>Travaux Pratiques</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">14:00-15:45</h1>
-                    <p>Salle 205</p>
-                  </div>
-                </div>
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Algorithmique</h1>
-                    <p>Travaux Dirigés</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">16:00-18:00</h1>
-                    <p>Salle Info 1</p>
-                  </div>
-                </div>
+                <p class="text-secondary fs-4">Matières suivies</p>
+                <h1 class="text-dark">4</h1>
               </div>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-primary bi-bar-chart"></i></div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row align-items-center">
-                <div class="col-3 d-flex align-items-center">
-                  <i class="bi px-2 fs-5 fw-bold bi-trophy"></i>
-                </div>
-                <div class="col-9">
-                  <h1 class="fs-5 fw-bold mb-0">Notes récentes</h1>
-                </div>
-              </div>
-            </div>
-            <div class="">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 p-2 bg-light border border-3 descript" style="border-radius: 10px;">
+            <div class="row">
               <div class="col">
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Mathématiques</h1>
-                    <p>Examen final</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-success fs-5 fw-bold">16/20</h1>
-                    <p>12/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Physique</h1>
-                    <p>Projet</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-success fs-5 fw-bold">18/20</h1>
-                    <p>09/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Informatique</h1>
-                    <p>TP Java</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-danger fs-5 fw-bold">15/20</h1>
-                    <p>05/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Anglais</h1>
-                    <p>Oral</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-danger fs-5 fw-bold">14/20</h1>
-                    <p>01/09/25</p>
-                  </div>
-                </div>
+                <p class="text-secondary fs-4">Matières suivies</p>
+                <h1 class="text-dark">6</h1>
               </div>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-purple bi-graph-up-arrow"></i></div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row">
-                <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
+        <div class="row g-3 p-4 mt-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <h1 class="fs-4 fw-bold">Moyennes par matière</h1>
+          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Mathématiques Appliquées</h3>
+                <p>2 évaluations</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-danger">15.5/20</h3>
               </div>
             </div>
-            <div class="">
-              <div class="row p-2">
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Physique</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                      aria-valuemin="0" aria-valuemax="100">
-                      75%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
-                      aria-valuemin="0" aria-valuemax="100">
-                      60%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Anglais</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100">
-                      80%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                      aria-valuemin="0" aria-valuemax="100">
-                      50%
-                    </div>
-                  </div>
-                </div>
+          </div>
+          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Physique Quantique</h3>
+                <p>2 évaluations</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-success">17.0/20</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Algorithmique</h3>
+                <p>1 évaluation</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-success">17.0/20</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Base de Données</h3>
+                <p>1 évaluation</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-danger">13.5/20</h3>
               </div>
             </div>
           </div>

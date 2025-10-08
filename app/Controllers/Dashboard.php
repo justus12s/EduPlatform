@@ -19,9 +19,9 @@ class Dashboard extends BaseController
         return view('dashboard/blank');
     }
 
-    public function fontawesome(): string
+    public function notes(): string
     {
-        return view('dashboard/fontawesome');
+        return view('dashboard/notes');
     }
 
     public function cours(): string

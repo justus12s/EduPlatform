@@ -25,14 +25,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
-    .present {
-      background-color: rgba(135, 122, 170, 0.1);
-      border-radius: 20px;
-      padding: 10px;
-      margin: 5px;
-      width: 23%;
-    }
-
     .icon-big {
       font-size: 40px;
       font-weight: 700;
@@ -53,47 +45,6 @@
       font-size: 28px;
       font-weight: 700;
       margin: 0;
-    }
-
-    .present p {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .present:hover {
-      transform: translateY(-5px);
-    }
-
-    .info {
-      background-color: rgba(99, 54, 223, 0.5);
-      border-radius: 20px;
-      color: white;
-      margin: 20px 10px 10px 10px;
-      padding: 20px 10px 0 20px;
-      font-family: "Manrope", sans-serif;
-      font-size: large;
-      font-weight: bold;
-    }
-
-    .coul {
-      background-color: rgba(80, 78, 85, 0.1);
-      border-radius: 10px;
-    }
-
-    .coul:hover {
-      background-color: rgba(80, 78, 85, 0.3);
-      transform: translateY(-5px);
-    }
-
-    .note {
-      background-color: rgba(156, 190, 241, 0.1);
-      border-radius: 10px;
-    }
-
-    .note:hover {
-      background-color: rgba(60, 199, 241, 0.3);
-      transform: translateY(-5px);
     }
 
     .sidebar-info {
@@ -124,13 +75,14 @@
       border-radius: 2px;
     }
 
+    .descript {
+      width: 48%;
+      margin: 10px;
+    }
+
     @media (max-width: 1170px) {
       aside.left-sidebar {
         display: none !important;
-      }
-
-      .present {
-        width: 100%;
       }
 
       .hear {
@@ -139,6 +91,11 @@
 
       header.topbar {
         display: none;
+      }
+
+      .descript {
+        width: 100%;
+        margin: 0;
       }
     }
   </style>
@@ -232,7 +189,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/fontawesome">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -274,7 +231,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/fontawesome" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>
@@ -302,28 +259,28 @@
       <div class="container-fluid">
         <div class="row" class="h-100 fs-5">
           <h1 class="fw-bold">Mes cours</h1>
-          <p>Consultez à vos cours cours inscrits et accédez aux ressources pédagogiques</p>
+          <p class="text-secondary fs-4">Consultez vos cours cours inscrits et accédez aux ressources pédagogiques</p>
         </div>
         <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
                 <h1 class="fs-5 fw-bold">Mathématiques appliquées</h1>
                 <p>MATH301</p>
               </div>
               <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-2 border border-2" style="border-radius: 10px;">6 crédits</p>
+                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">6 crédits</p>
               </div>
             </div>
             <div class="row">
-              <p>Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-              <p>Docteur François Martin</p>
-              <p>Prochain cours : Lundi 08:00</p>
+              <p class="text-secondary fs-3 opacity-50">Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur François Martin</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Lundi 08:00</p>
             </div>
             <div class="row">
               <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
             </div>
-            <div class="progress" style="height: 10px; border-radius:10px;">
+            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
               <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
                 aria-valuemin="0" aria-valuemax="100">
                 75%
@@ -333,84 +290,84 @@
               <button type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</button>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
-                <h1 class="fs-5 fw-bold">Mathématiques appliquées</h1>
-                <p>MATH301</p>
+                <h1 class="fs-5 fw-bold">Physique Quantique</h1>
+                <p>PHYS401</p>
               </div>
               <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-2 border border-2" style="border-radius: 10px;">6 crédits</p>
+                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">5 crédits</p>
               </div>
             </div>
             <div class="row">
-              <p>Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-              <p>Docteur François Martin</p>
-              <p>Prochain cours : Lundi 08:00</p>
+              <p class="text-secondary fs-3 opacity-50">Introduction aux concepts fondamentaux de la mécanique quantique et applications.</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Franck Dupont</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mardi 14:00</p>
             </div>
             <div class="row">
               <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
             </div>
-            <div class="progress" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
                 aria-valuemin="0" aria-valuemax="100">
-                75%
+                60%
               </div>
             </div>
             <div class="row p-3">
               <button type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</button>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
-                <h1 class="fs-5 fw-bold">Mathématiques appliquées</h1>
-                <p>MATH301</p>
+                <h1 class="fs-5 fw-bold">Algorithmique Avancée</h1>
+                <p>INFO301</p>
               </div>
               <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-2 border border-2" style="border-radius: 10px;">6 crédits</p>
+                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">4 crédits</p>
               </div>
             </div>
             <div class="row">
-              <p>Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-              <p>Docteur François Martin</p>
-              <p>Prochain cours : Lundi 08:00</p>
+              <p class="text-secondary fs-3 opacity-50">Etudes des algorithmiques complexes, structures de données avancées et optimisation.</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Jean Marin</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mercredi 08:00</p>
             </div>
             <div class="row">
-              <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
+              <h1 class="text-start h-100 fs-5 mx-2 fs-bold">Progression</h1>
             </div>
-            <div class="progress" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
                 aria-valuemin="0" aria-valuemax="100">
-                75%
+                80%
               </div>
             </div>
             <div class="row p-3">
               <button type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</button>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
-                <h1 class="fs-5 fw-bold">Mathématiques appliquées</h1>
-                <p>MATH301</p>
+                <h1 class="fs-5 fw-bold">Bases de Données</h1>
+                <p>INFO302</p>
               </div>
               <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-2 border border-2" style="border-radius: 10px;">6 crédits</p>
+                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">4 crédits</p>
               </div>
             </div>
             <div class="row">
-              <p>Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-              <p>Docteur François Martin</p>
-              <p>Prochain cours : Lundi 08:00</p>
+              <p class="text-secondary fs-3 opacity-50">Conception et gestion de bases de données relationelles, SQL.</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Sophie Laurent</p>
+              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mardi 08:00</p>
             </div>
             <div class="row">
               <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
             </div>
-            <div class="progress" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
+              <div class="progress-bar bg-dark" role="progressbar" style="width: 65%;" aria-valuenow="65"
                 aria-valuemin="0" aria-valuemax="100">
-                75%
+                65%
               </div>
             </div>
             <div class="row p-3">

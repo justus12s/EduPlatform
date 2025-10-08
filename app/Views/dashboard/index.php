@@ -237,7 +237,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/fontawesome">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -279,7 +279,7 @@
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/fontawesome" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>
