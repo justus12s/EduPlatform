@@ -36,17 +36,17 @@
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 40%;
+      border-radius: 20%;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(189, 121, 121, 0.1);
+      background-color: rgba(137, 226, 214, 0.2);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.2);
+      background-color: rgba(84, 225, 230, 0.4);
     }
 
     .box-title {
@@ -324,8 +324,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Cours actifs</p>
-                <h1 class="box-title">6</h1>
+                <p class="d-flex align-items-center justify-content-end">Cours actifs</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">6</h1>
               </div>
             </div>
           </div>
@@ -333,8 +333,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Crédits obtenus</p>
-                <h1 class="box-title">45/60</h1>
+                <p class="d-flex align-items-center justify-content-end">Crédits obtenus</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-3">45/60</h1>
               </div>
             </div>
           </div>
@@ -342,8 +342,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Cours aujourd'hui</p>
-                <h1 class="box-title">2</h1>
+                <p class="d-flex align-items-center justify-content-end">Cours aujourd'hui</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">2</h1>
               </div>
             </div>
           </div>
@@ -351,8 +351,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Devoirs en retard</p>
-                <h1 class="box-title">3</h1>
+                <p class="d-flex align-items-center justify-content-end">Devoirs en retard</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">3</h1>
               </div>
             </div>
           </div>

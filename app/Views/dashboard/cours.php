@@ -28,17 +28,17 @@
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 40%;
+      border-radius: 20%;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(189, 121, 121, 0.1);
+      background-color: rgba(137, 226, 214, 0.2);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.2);
+      background-color: rgba(84, 225, 230, 0.4);
     }
 
     .box-title {
@@ -287,7 +287,7 @@
               </div>
             </div>
             <div class="row p-3">
-              <button type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</button>
+              <a href="<?= base_url() ?>dashboard/details" type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</a>
             </div>
           </div>
           <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">

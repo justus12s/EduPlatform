@@ -28,17 +28,17 @@
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 40%;
+      border-radius: 20%;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(240, 230, 230, 0.1);
+      background-color: rgba(137, 226, 214, 0.2);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.2);
+      background-color: rgba(84, 225, 230, 0.4);
     }
 
     .box-title {
@@ -316,9 +316,9 @@
             </div>
           </div>
         </div>
-        <div class="row g-3 p-4 mt-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+        <div class="row g-3 p-4 mt-3 bg-light border border-1" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
           <h1 class="fs-4 fw-bold">Moyennes par matière</h1>
-          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Mathématiques Appliquées</h3>
@@ -329,7 +329,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Physique Quantique</h3>
@@ -340,7 +340,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Algorithmique</h3>
@@ -351,7 +351,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border border-secondary my-2 p-2 pb-0" style="border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Base de Données</h3>

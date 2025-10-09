@@ -43,4 +43,9 @@ class Dashboard extends BaseController
     {
         return view('dashboard/authentication_register');
     }
+
+    public function details(): string
+    {
+        return view('dashboard/details');
+    }
 }
