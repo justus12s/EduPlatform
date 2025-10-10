@@ -216,7 +216,7 @@
 
           <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMobile"
             aria-controls="mainNavbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="bi bi-list"></i>
           </button>
 
           <div class="collapse navbar-collapse" id="mainNavbarMobile">

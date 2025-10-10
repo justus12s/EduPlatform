@@ -194,7 +194,7 @@
 
           <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMobile"
             aria-controls="mainNavbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="bi bi-list"></i>
           </button>
 
           <div class="collapse navbar-collapse" id="mainNavbarMobile">
@@ -316,9 +316,9 @@
             </div>
           </div>
         </div>
-        <div class="row g-3 p-4 mt-3 bg-light border border-1" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
+        <div class="row g-3 p-4 mt-3 bg-light border border-1" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
           <h1 class="fs-4 fw-bold">Moyennes par matière</h1>
-          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Mathématiques Appliquées</h3>
@@ -329,7 +329,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Physique Quantique</h3>
@@ -340,7 +340,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Algorithmique</h3>
@@ -351,7 +351,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.4);border-radius: 10px;">
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
             <div class="row">
               <div class="col-8">
                 <h3 class="fs-5 fw-bold">Base de Données</h3>
@@ -362,6 +362,31 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="row g-3 p-4 mt-3 bg-light border border-1" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
+          <h1 class="fs-5 fw-bold">Détails des évaluations</h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Matière</th>
+                <th>Evaluation</th>
+                <th>Type</th>
+                <th>Note</th>
+                <th>Coefficient</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mathématiques Appliquées</td>
+                <td>Examen final</td>
+                <td>Examen</td>
+                <td>16/20</td>
+                <td>Coeff. 3</td>
+                <td>15/01/2025</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
       <!-- ============================================================== -->

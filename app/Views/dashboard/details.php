@@ -80,6 +80,11 @@
             margin-right: 10px;
         }
 
+        .descrip {
+            width: 39%;
+            margin-left: 10px;
+        }
+
         @media (max-width: 1170px) {
             aside.left-sidebar {
                 display: none !important;
@@ -96,6 +101,12 @@
             .descript {
                 width: 100%;
                 margin: 0;
+            }
+
+            .descrip {
+                width: 100%;
+                margin: 0;
+                margin-top: 10px;
             }
         }
     </style>
@@ -173,7 +184,7 @@
 
                     <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarMobile"
                         aria-controls="mainNavbarMobile" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="bi bi-list"></i>
                     </button>
 
                     <div class="collapse navbar-collapse" id="mainNavbarMobile">
@@ -266,57 +277,101 @@
                         <p class="text-secondary fs-4">MATH301</p>
                     </div>
                 </div>
-                <div class="col descript">
-                    <div class="row border border-secondary p-2" style="border-radius: 20px;">
-                        <h1 class="fs-5 fw-bold">Informations générales</h1>
-                        <p class="text-secondary fs-3 pt-2 opacity-50">Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-                        <div class="row">
-                            <div class="col fs-5"><i class="bi bi-people"></i> Dr François Martin</div>
-                            <div class="col fs-5"><i class="bi bi-book"></i> 6 crédits</div>
+                <div class="row">
+                    <div class="col descript">
+                        <div class="row border border-secondary p-2" style="border-radius: 20px;">
+                            <h1 class="fs-5 fw-bold">Informations générales</h1>
+                            <p class="text-secondary fs-3 pt-2 opacity-50">Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
+                            <div class="row">
+                                <div class="col fs-5"><i class="bi bi-people"></i> Dr François Martin</div>
+                                <div class="col fs-5"><i class="bi bi-book"></i> 6 crédits</div>
+                            </div>
+                            <div class="row mt-3">
+                                <h1 class="text-start fs-3">Progression du cours</h1>
+                                <div class="progress mx-2 p-0" style="height: 10px; border-radius:10px;">
+                                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                        aria-valuemin="0" aria-valuemax="100">
+                                        75%
+                                    </div>
+                                </div>
+                                <p class="fs-2 fw-bold">75% complèté</p>
+                            </div>
                         </div>
-                        <div class="row mt-3">
-                            <h1 class="text-start fs-3">Progression du cours</h1>
-                            <div class="progress mx-2 p-0" style="height: 10px; border-radius:10px;">
-                                <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100">
-                                    75%
+                        <div class="row border border-secondary mt-2 p-3 pb-4" style="border-radius: 20px;">
+                            <h1 class="fs-5 fw-bold">Planning des cours</h1>
+                            <div class="row m-2 py-3" style="background-color:rgba(174, 166, 201, 0.5); border-radius: 10px;">
+                                <div class="col col-lg-4 fs-5 fw-bold">
+                                    <i class="bi bi-calendar"></i>
+                                    Lundi
+                                </div>
+                                <div class="col col-lg-8">
+                                    <div class="row">
+                                        <div class="col"><i class="bi bi-clock"></i> 08:00-10:00</div>
+                                        <div class="col"><i class="bi bi-geo-alt"></i> Amphi A</div>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="fs-2 fw-bold">75% complèté</p>
+                            <div class="row m-2 py-3" style="background-color:rgba(174, 166, 201, 0.5); border-radius: 10px;">
+                                <div class="col fs-5 fw-bold">
+                                    <i class="bi bi-calendar"></i>
+                                    Mercredi
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <div class="col"><i class="bi bi-clock"></i> 14:00-16:00</div>
+                                        <div class="col"><i class="bi bi-geo-alt"></i> Salle 205</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row border border-secondary mt-2 p-3" style="border-radius: 20px;">
+                            <h1 class="fs-5 fw-bold">Ressources pédagogiques</h1>
+                            <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Livre : Analyse numérique</div>
+                            <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Support de cours PDF</div>
+                            <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Exercices corrigés</div>
                         </div>
                     </div>
-                    <div class="row border border-secondary mt-2 p-3 pb-4" style="border-radius: 20px;">
-                        <h1 class="fs-5 fw-bold">Planning des cours</h1>
-                        <div class="row m-2 py-3" style="background-color:rgba(174, 166, 201, 0.5); border-radius: 10px;">
-                            <div class="col col-lg-4 fs-5 fw-bold">
-                                <i class="bi bi-calendar"></i>
-                                Lundi
+                    <div class="descrip">
+                        <div class="row border border-secondary p-3" style="border-radius: 20px;">
+                            <h1 class="fs-5 fw-bold">Devoirs à rendre</h1>
+                            <div class="row m-2 p-1 border" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;">
+                                <div class="col">
+                                    <h1 class="fs-4 fw-bold">Devoir Maison 3</h1>
+                                    <p class="text-secondary fs-4">Echéance : 15/02/2025</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <h1 class="fs-3 fw-bold p-1" style="background-color: rgba(233, 207, 123, 0.5); border-radius: 10px;">À rendre</h1>
+                                </div>
                             </div>
-                            <div class="col col-lg-8">
-                                <div class="row">
-                                    <div class="col"><i class="bi bi-clock"></i> 08:00-10:00</div>
-                                    <div class="col"><i class="bi bi-geo-alt"></i> Amphi A</div>
+                            <div class="row m-2 p-1 border" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;">
+                                <div class="col">
+                                    <h1 class="fs-4 fw-bold">Projet Final</h1>
+                                    <p class="text-secondary fs-4">Echéance : 01/03/2025</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <h1 class="fs-3 fw-bold p-1" style="background-color: rgba(233, 207, 123, 0.5);border-radius: 10px;">À rendre</h1>
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-2 py-3" style="background-color:rgba(174, 166, 201, 0.5); border-radius: 10px;">
-                            <div class="col fs-5 fw-bold">
-                                <i class="bi bi-calendar"></i>
-                                Mercredi
+                        <div class="row border border-secondary mt-2 p-3" style="border-radius: 20px;">
+                            <h1 class="fs-5 fw-bold">Statistiques</h1>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-secondary fs-4">Etudiants inscrits</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <h1 class="fs-4 fw-bold">45/50</h1>
+                                </div>
                             </div>
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col"><i class="bi bi-clock"></i> 14:00-16:00</div>
-                                    <div class="col"><i class="bi bi-geo-alt"></i> Salle 205</div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-secondary fs-4">Prochain cours</p>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-center">
+                                    <h1 class="fs-4 fw-bold">Lundi 08:00</h1>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row border border-secondary mt-2 p-3" style="border-radius: 20px;">
-                        <h1 class="fs-5 fw-bold">Planning des cours</h1>
-                        <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Livre : Analyse numérique</div>
-                        <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Support de cours PDF</div>
-                        <div class="col-12 p-2 mx-2 my-1 border fs-4" style="border-color: rgba(137, 226, 214, 0.4); border-radius: 5px;"><i class="bi bi-book"></i> Exercices corrigés</div>
                     </div>
                 </div>
             </div>
