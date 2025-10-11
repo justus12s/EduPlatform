@@ -51,7 +51,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
                     <?php endif; ?>
-                    <form class="form g-3 row" action="<?= site_url('dashboard/index') ?>" method="POST"> <?= csrf_field() ?>
+                    <form class="form g-3 row" action="<?= site_url('dashboard/etudiant/index') ?>" method="POST"> <?= csrf_field() ?>
                         <div>
                             <label class="form-label" for="">Statut : </label>
                             <select class="form-control" name="statut" id="statut">

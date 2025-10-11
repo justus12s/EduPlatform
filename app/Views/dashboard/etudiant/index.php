@@ -36,17 +36,17 @@
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 40%;
+      border-radius: 20%;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(189, 121, 121, 0.1);
+      background-color: rgba(137, 226, 214, 0.2);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.2);
+      background-color: rgba(84, 225, 230, 0.4);
     }
 
     .box-title {
@@ -140,6 +140,11 @@
       header.topbar {
         display: none;
       }
+
+      .page-wrapper {
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+      }
     }
   </style>
 </head>
@@ -168,7 +173,7 @@
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
-          <a class="logo-text" href="<?= site_url() ?>dashboard/index">
+          <a class="logo-text" href="<?= site_url() ?>dashboard/etudiant/index">
             <!-- Logo icon -->
             <b class="favicon">
               <!-- Dark Logo icon -->
@@ -198,7 +203,7 @@
                   <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
                 </div>
                 <div class="col">
-                  <a href=""><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
+                  <a href="<?= site_url() ?>dashboard/etudiant/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
                 </div>
               </div>
             </li>
@@ -210,7 +215,7 @@
     <div class="hear">
       <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/etudiant/index">
             <i class="far fa-clock me-1"></i> Tableau de bord
           </a>
 
@@ -222,17 +227,17 @@
           <div class="collapse navbar-collapse" id="mainNavbarMobile">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/profile">
                   <i class="fa fa-user me-1"></i> Profil
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/cours">
                   <i class="fa fa-book me-1"></i> Mes cours
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -253,28 +258,28 @@
           <ul id="sidebarnav">
             <li class="sidebar-item pt-2">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/profile" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span class="hide-menu">Profil</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
                 <span class="hide-menu">Mes cours</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>
@@ -319,8 +324,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Cours actifs</p>
-                <h1 class="box-title">6</h1>
+                <p class="d-flex align-items-center justify-content-end">Cours actifs</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">6</h1>
               </div>
             </div>
           </div>
@@ -328,8 +333,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Crédits obtenus</p>
-                <h1 class="box-title">45/60</h1>
+                <p class="d-flex align-items-center justify-content-end">Crédits obtenus</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-3">45/60</h1>
               </div>
             </div>
           </div>
@@ -337,8 +342,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Cours aujourd'hui</p>
-                <h1 class="box-title">2</h1>
+                <p class="d-flex align-items-center justify-content-end">Cours aujourd'hui</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">2</h1>
               </div>
             </div>
           </div>
@@ -346,15 +351,15 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
               <div class="col-lg-10 col-8">
-                <p>Devoirs en retard</p>
-                <h1 class="box-title">3</h1>
+                <p class="d-flex align-items-center justify-content-end">Devoirs en retard</p>
+                <h1 class="box-title d-flex align-items-center justify-content-end me-5">3</h1>
               </div>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 mx-lg-3 col-sm-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
             <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">
@@ -414,7 +419,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-5 col-sm-12 mx-lg-3 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
             <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">

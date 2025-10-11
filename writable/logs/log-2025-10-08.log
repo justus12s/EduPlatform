@@ -1,9 +1,9 @@
-CRITICAL - 2025-10-08 00:34:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/note.php"
-[Method: GET, Route: dashboard/note]
+CRITICAL - 2025-10-08 00:34:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/etudiant/note.php"
+[Method: GET, Route: dashboard/etudiant/note]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
- 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/note.php')
- 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/note', [], true)
- 3 APPPATH\Controllers\Dashboard.php(24): view('dashboard/note')
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/etudiant/note.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('dashboard/etudiant/note', [], true)
+ 3 APPPATH\Controllers\Dashboard.php(24): view('dashboard/etudiant/note')
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->note()
  5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
  6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)

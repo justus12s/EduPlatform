@@ -10,9 +10,9 @@ $routes->get('/accueil', 'Home::accueil');
 $routes->get('/login', 'Home::login');
 $routes->get('/register', 'Home::register');
 
-$routes->post('dashboard/index', 'Dashboard::index');
-$routes->get('dashboard/index', 'Dashboard::index');
-$routes->get('dashboard/notes', 'Dashboard::notes');
-$routes->get('dashboard/profile', 'Dashboard::profile');
-$routes->get('dashboard/cours', 'Dashboard::cours');
-$routes->get('dashboard/details', 'Dashboard::details');
+$routes->post('dashboard/etudiant/index', 'Dashboard::index');
+$routes->get('dashboard/etudiant/index', 'Dashboard::index');
+$routes->get('dashboard/etudiant/notes', 'Dashboard::notes');
+$routes->get('dashboard/etudiant/profile', 'Dashboard::profile');
+$routes->get('dashboard/etudiant/cours', 'Dashboard::cours');
+$routes->get('dashboard/etudiant/details', 'Dashboard::details');

@@ -65,7 +65,7 @@
     </style>
 </head>
 
-<body class="bg-secondary bg-opacity-25 pt-5">
+<body class="pt-5">
     <div class="container text-center mt-5">
         <h1>Système de Gestion Universitaire</h1>
         <p>Choisissez votre profil pour accéder à votre compte</p>

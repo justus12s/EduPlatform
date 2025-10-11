@@ -76,9 +76,25 @@
     }
 
     .descript {
-      width: 48%;
+      width: 31%;
       margin: 10px;
     }
+
+    .note {
+      width: 48%;
+      margin: 5px;
+    }
+
+    .descript h1 {
+      font-size: 1.7rem;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    .descript:hover {
+      transform: translateY(-10px);
+    }
+
 
     @media (max-width: 1170px) {
       aside.left-sidebar {
@@ -94,6 +110,11 @@
       }
 
       .descript {
+        width: 100%;
+        margin: 0;
+      }
+
+      .note {
         width: 100%;
         margin: 0;
       }
@@ -125,7 +146,7 @@
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
-          <a class="logo-text" href="<?= site_url() ?>dashboard/index">
+          <a class="logo-text" href="<?= site_url() ?>dashboard/etudiant/index">
             <!-- Logo icon -->
             <b class="favicon">
               <!-- Dark Logo icon -->
@@ -167,7 +188,7 @@
     <div class="hear">
       <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/etudiant/index">
             <i class="far fa-clock me-1"></i> Tableau de bord
           </a>
 
@@ -179,17 +200,17 @@
           <div class="collapse navbar-collapse" id="mainNavbarMobile">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/profile">
                   <i class="fa fa-user me-1"></i> Profil
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/cours">
                   <i class="fa fa-book me-1"></i> Mes cours
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -210,28 +231,28 @@
           <ul id="sidebarnav">
             <li class="sidebar-item pt-2">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/profile" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span class="hide-menu">Profil</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
                 <span class="hide-menu">Mes cours</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>
@@ -258,143 +279,108 @@
     <div class="page-wrapper">
       <div class="container-fluid">
         <div class="row" class="h-100 fs-5">
-          <h1 class="fw-bold">Mes cours</h1>
-          <p class="text-secondary fs-4">Consultez vos cours cours inscrits et accédez aux ressources pédagogiques</p>
+          <div class="col">
+            <h1 class="fw-bold">Mes notes</h1>
+            <p class="text-secondary fs-4">Consultez vos résultats et votre progression académique</p>
+          </div>
+          <div class="col-3 d-flex justify-content-end align-items-center">
+            <p class="fs-5 text-dark fw-bold">Semestre 5</p>
+          </div>
         </div>
         <div class="row">
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 bg-light border border-3 descript" style="border-radius: 10px;">
             <div class="row">
-              <div class="col">
-                <h1 class="fs-5 fw-bold">Mathématiques appliquées</h1>
-                <p>MATH301</p>
+              <div class="col-8">
+                <p class="text-secondary fs-4">Moyenne générale</p>
+                <h1 class="text-dark">15.6/20</h1>
               </div>
-              <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">6 crédits</p>
-              </div>
-            </div>
-            <div class="row">
-              <p class="text-secondary fs-3 opacity-50">Cours avancé de mathématiques courant l'analyse numérique et les équations différentielles.</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur François Martin</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Lundi 08:00</p>
-            </div>
-            <div class="row">
-              <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
-            </div>
-            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                aria-valuemin="0" aria-valuemax="100">
-                75%
-              </div>
-            </div>
-            <div class="row p-3">
-              <a href="<?= base_url() ?>dashboard/details" type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</a>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-success bi-graph-up-arrow"></i></div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 p-2 bg-light border border-3 descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
-                <h1 class="fs-5 fw-bold">Physique Quantique</h1>
-                <p>PHYS401</p>
+                <p class="text-secondary fs-4">Matières suivies</p>
+                <h1 class="text-dark">4</h1>
               </div>
-              <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">5 crédits</p>
-              </div>
-            </div>
-            <div class="row">
-              <p class="text-secondary fs-3 opacity-50">Introduction aux concepts fondamentaux de la mécanique quantique et applications.</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Franck Dupont</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mardi 14:00</p>
-            </div>
-            <div class="row">
-              <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
-            </div>
-            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
-                aria-valuemin="0" aria-valuemax="100">
-                60%
-              </div>
-            </div>
-            <div class="row p-3">
-              <a href="<?= base_url() ?>dashboard/details" type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</a>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-primary bi-bar-chart"></i></div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-3 col-sm-12 mt-1 p-2 bg-light border border-3 descript" style="border-radius: 10px;">
             <div class="row">
               <div class="col">
-                <h1 class="fs-5 fw-bold">Algorithmique Avancée</h1>
-                <p>INFO301</p>
+                <p class="text-secondary fs-4">Matières suivies</p>
+                <h1 class="text-dark">6</h1>
               </div>
-              <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">4 crédits</p>
-              </div>
-            </div>
-            <div class="row">
-              <p class="text-secondary fs-3 opacity-50">Etudes des algorithmiques complexes, structures de données avancées et optimisation.</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Jean Marin</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mercredi 08:00</p>
-            </div>
-            <div class="row">
-              <h1 class="text-start h-100 fs-5 mx-2 fs-bold">Progression</h1>
-            </div>
-            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                aria-valuemin="0" aria-valuemax="100">
-                80%
-              </div>
-            </div>
-            <div class="row p-3">
-              <a href="<?= base_url() ?>dashboard/details" type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</a>
+              <div class="col-4 d-flex align-items-center justify-content-end"><i class="bi icon-big text-purple bi-graph-up-arrow"></i></div>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 p-4 bg-light border border-1 border-secondary shadow descript" style="border-radius: 10px;">
+        </div>
+        <div class="row g-3 p-4 mt-3 bg-light border border-1" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
+          <h1 class="fs-4 fw-bold">Moyennes par matière</h1>
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
             <div class="row">
-              <div class="col">
-                <h1 class="fs-5 fw-bold">Bases de Données</h1>
-                <p>INFO302</p>
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Mathématiques Appliquées</h3>
+                <p>2 évaluations</p>
               </div>
-              <div class="col d-flex justify-content-end align-items-center">
-                <p class="p-1 border border-1 border-dark" style="border-radius: 20px;">4 crédits</p>
-              </div>
-            </div>
-            <div class="row">
-              <p class="text-secondary fs-3 opacity-50">Conception et gestion de bases de données relationelles, SQL.</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-people"></i> Docteur Sophie Laurent</p>
-              <p class=" fs-5 fw-bold"><i class="bi bi-clock"></i> Prochain cours : Mardi 08:00</p>
-            </div>
-            <div class="row">
-              <h1 class="text-start h-100 fs-5 fs-bold">Progression</h1>
-            </div>
-            <div class="progress mx-2" style="height: 10px; border-radius:10px;">
-              <div class="progress-bar bg-dark" role="progressbar" style="width: 65%;" aria-valuenow="65"
-                aria-valuemin="0" aria-valuemax="100">
-                65%
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-danger">15.5/20</h3>
               </div>
             </div>
-            <div class="row p-3">
-              <a href="<?= base_url() ?>dashboard/details" type="button" class="btn btn-dark w-100 rounded-3">Voir le détail</a>
+          </div>
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Physique Quantique</h3>
+                <p>2 évaluations</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-success">17.0/20</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Algorithmique</h3>
+                <p>1 évaluation</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-success">17.0/20</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 note border my-2 p-2 pb-0" style="border-color: rgba(137, 226, 214, 0.5);border-radius: 10px;">
+            <div class="row">
+              <div class="col-8">
+                <h3 class="fs-5 fw-bold">Base de Données</h3>
+                <p>1 évaluation</p>
+              </div>
+              <div class="col-4">
+                <h3 class="fs-5 fw-bold d-flex justify-content-end align-items-center text-danger">13.5/20</h3>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- ============================================================== -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <footer class="footer h-100 text-dark text-center fw-bold">
+        2025 © DevJustus
+        <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
+      </footer>
+      <!-- ============================================================== -->
+      <!-- End footer -->
+      <!-- ============================================================== -->
     </div>
-  </div>
-  <!-- ============================================================== -->
-  <!-- End Container fluid  -->
-  <!-- ============================================================== -->
-  <!-- ============================================================== -->
-  <!-- footer -->
-  <!-- ============================================================== -->
-  <footer class="footer h-100 text-dark text-center fw-bold">
-    2025 © DevJustus
-    <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
-  </footer>
-  <!-- ============================================================== -->
-  <!-- End footer -->
-  <!-- ============================================================== -->
-  </div>
-  <!-- ============================================================== -->
-  <!-- End Page wrapper  -->
-  <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
   </div>
   <!-- ============================================================== -->
   <!-- End Wrapper -->

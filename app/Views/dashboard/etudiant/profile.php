@@ -168,7 +168,7 @@
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
-          <a class="logo-text" href="<?= site_url() ?>dashboard/index">
+          <a class="logo-text" href="<?= site_url() ?>dashboard/etudiant/index">
             <!-- Logo icon -->
             <b class="favicon">
               <!-- Dark Logo icon -->
@@ -210,7 +210,7 @@
     <div class="hear">
       <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/etudiant/index">
             <i class="far fa-clock me-1"></i> Tableau de bord
           </a>
 
@@ -222,17 +222,17 @@
           <div class="collapse navbar-collapse" id="mainNavbarMobile">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/profile">
                   <i class="fa fa-user me-1"></i> Profil
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/cours">
                   <i class="fa fa-book me-1"></i> Mes cours
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/notes">
                   <i class="fa fa-font me-1"></i> Mes notes
                 </a>
               </li>
@@ -253,28 +253,28 @@
           <ul id="sidebarnav">
             <li class="sidebar-item pt-2">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/profile" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span class="hide-menu">Profil</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
                 <span class="hide-menu">Mes cours</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/etudiant/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
                 <span class="hide-menu">Mes notes</span>
               </a>

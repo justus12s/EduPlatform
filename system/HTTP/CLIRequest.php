@@ -90,7 +90,7 @@ class CLIRequest extends Request
      * Example:
      *      php index.php users 21 profile -foo bar
      *
-     *      // Routes to /users/21dashboard/profile (index is removed for routing sake)
+     *      // Routes to /users/21dashboard/etudiant/profile (index is removed for routing sake)
      *      // with the option foo = bar.
      */
     public function getPath(): string

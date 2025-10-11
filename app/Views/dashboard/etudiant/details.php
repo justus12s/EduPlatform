@@ -136,7 +136,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="logo-text" href="<?= site_url() ?>dashboard/index">
+                    <a class="logo-text" href="<?= site_url() ?>dashboard/etudiant/index">
                         <!-- Logo icon -->
                         <b class="favicon">
                             <!-- Dark Logo icon -->
@@ -178,7 +178,7 @@
         <div class="hear">
             <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
                 <div class="container-fluid">
-                    <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/index">
+                    <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/etudiant/index">
                         <i class="far fa-clock me-1"></i> Tableau de bord
                     </a>
 
@@ -190,17 +190,17 @@
                     <div class="collapse navbar-collapse" id="mainNavbarMobile">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= site_url() ?>dashboard/profile">
+                                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/profile">
                                     <i class="fa fa-user me-1"></i> Profil
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= site_url() ?>dashboard/cours">
+                                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/cours">
                                     <i class="fa fa-book me-1"></i> Mes cours
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= site_url() ?>dashboard/notes">
+                                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/notes">
                                     <i class="fa fa-font me-1"></i> Mes notes
                                 </a>
                             </li>
@@ -221,28 +221,28 @@
                     <ul id="sidebarnav">
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="<?= site_url() ?>dashboard/index" aria-expanded="false">
+                                href="<?= site_url() ?>dashboard/etudiant/index" aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Tableau de bord</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="<?= site_url() ?>dashboard/profile" aria-expanded="false">
+                                href="<?= site_url() ?>dashboard/etudiant/profile" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Profil</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="<?= site_url() ?>dashboard/cours" aria-expanded="false">
+                                href="<?= site_url() ?>dashboard/etudiant/cours" aria-expanded="false">
                                 <i class="fa fa-table" aria-hidden="true"></i>
                                 <span class="hide-menu">Mes cours</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="<?= site_url() ?>dashboard/notes" aria-expanded="false">
+                                href="<?= site_url() ?>dashboard/etudiant/notes" aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
                                 <span class="hide-menu">Mes notes</span>
                             </a>
@@ -270,7 +270,7 @@
             <div class="container-fluid">
                 <div class="row d-flex align-items-center" class="h-100 fs-5">
                     <div class="col-lg-2 col-3">
-                        <a href="<?= base_url() ?>dashboard/cours" type="button" class="btn btn-light fs-5 fw-bold border border-dark rounded-3"><i class="bi bi-arrow-left"></i> Retour</a>
+                        <a href="<?= base_url() ?>dashboard/etudiant/cours" type="button" class="btn btn-light fs-5 fw-bold border border-dark rounded-3"><i class="bi bi-arrow-left"></i> Retour</a>
                     </div>
                     <div class="col-lg-10 col-9">
                         <h1 class="fw-bold">Mathématiques appliquées</h1>
@@ -300,11 +300,11 @@
                         <div class="row border border-secondary mt-2 p-3 pb-4" style="border-radius: 20px;">
                             <h1 class="fs-5 fw-bold">Planning des cours</h1>
                             <div class="row m-2 py-3" style="background-color:rgba(174, 166, 201, 0.5); border-radius: 10px;">
-                                <div class="col col-lg-4 fs-5 fw-bold">
+                                <div class="col fs-5 fw-bold">
                                     <i class="bi bi-calendar"></i>
                                     Lundi
                                 </div>
-                                <div class="col col-lg-8">
+                                <div class="col">
                                     <div class="row">
                                         <div class="col"><i class="bi bi-clock"></i> 08:00-10:00</div>
                                         <div class="col"><i class="bi bi-geo-alt"></i> Amphi A</div>

@@ -51,7 +51,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                         </div>
                     <?php endif; ?>
-                    <form class="form g-3 row" action="<?= site_url('dashboard/index') ?>" method="POST"> <?= csrf_field() ?>
+                    <form class="form g-3 row" action="<?= site_url('dashboard/etudiant/index') ?>" method="POST"> <?= csrf_field() ?>
                         <div class="col-6">
                             <label class="form-label">Nom : </label>
                             <input type="text" class="form-control" placeholder="Votre nom" name="nom" required>

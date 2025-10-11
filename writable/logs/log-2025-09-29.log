@@ -153,7 +153,7 @@ in SYSTEMPATH\Router\Router.php on line 741.
  7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\BONOU Mahuna Justus\\Desktop\\WEB\\BOOSTRAP\\Application\\Mon_Projet\\public\\index.php')
 CRITICAL - 2025-09-29 02:40:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
-[Method: POST, Route: dashboard/index]
+[Method: POST, Route: dashboard/etudiant/index]
 in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
  2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('index', [], true)

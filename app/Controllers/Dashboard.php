@@ -6,46 +6,26 @@ class Dashboard extends BaseController
 {
     public function index(): string
     {
-        return view('dashboard/index');
+        return view('dashboard/etudiant/index');
     }
 
     public function profile(): string
     {
-        return view('dashboard/profile');
-    }
-
-    public function blank(): string
-    {
-        return view('dashboard/blank');
+        return view('dashboard/etudiant/profile');
     }
 
     public function notes(): string
     {
-        return view('dashboard/notes');
+        return view('dashboard/etudiant/notes');
     }
 
     public function cours(): string
     {
-        return view('dashboard/cours');
-    }
-
-    public function map_google(): string
-    {
-        return view('dashboard/map_google');
-    }
-
-    public function authentication_login(): string
-    {
-        return view('dashboard/authentication_login');
-    }
-
-    public function authentication_register(): string
-    {
-        return view('dashboard/authentication_register');
+        return view('dashboard/etudiant/cours');
     }
 
     public function details(): string
     {
-        return view('dashboard/details');
+        return view('dashboard/etudiant/details');
     }
 }
