@@ -36,17 +36,17 @@
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 20%;
+      border-radius: 40%;
       padding: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgba(137, 226, 214, 0.2);
+      background-color: rgba(189, 121, 121, 0.1);
       transition: 0.3s;
     }
 
     .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.4);
+      background-color: rgba(84, 225, 230, 0.2);
     }
 
     .box-title {
@@ -69,7 +69,7 @@
       background-color: rgba(99, 54, 223, 0.5);
       border-radius: 20px;
       color: white;
-      margin: 20px 10px 0 10px;
+      margin: 20px 10px 10px 10px;
       padding: 20px 10px 0 20px;
       font-family: "Manrope", sans-serif;
       font-size: large;
@@ -124,16 +124,6 @@
       border-radius: 2px;
     }
 
-    .cours {
-      width: 49%;
-      margin-right: 3px;
-    }
-
-    .note1 {
-      width: 49%;
-      margin-left: 3px;
-    }
-
     @media (max-width: 1170px) {
       aside.left-sidebar {
         display: none !important;
@@ -149,21 +139,6 @@
 
       header.topbar {
         display: none;
-      }
-
-      .page-wrapper {
-        margin-left: 0 !important;
-        padding-left: 0 !important;
-      }
-
-      .note1 {
-        width: 100%;
-        margin: auto;
-      }
-
-      .cours {
-        width: 100%;
-        margin: auto;
       }
     }
   </style>
@@ -223,7 +198,7 @@
                   <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
                 </div>
                 <div class="col">
-                  <a href="<?= site_url() ?>dashboard/etudiant/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
+                  <a href=""><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
                 </div>
               </div>
             </li>
@@ -336,15 +311,16 @@
             <h1>15.6/20</h1>
           </div>
         </div>
+        <!-- /.col-lg-12 -->
       </div>
       <div class="container-fluid w-100 text-center">
-        <div class="row mb-2">
+        <div class="row">
           <div class="col-lg-3 col-md-12 present">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
               <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Cours actifs</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">6</h1>
+                <p>Cours actifs</p>
+                <h1 class="box-title">6</h1>
               </div>
             </div>
           </div>
@@ -352,8 +328,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
               <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Crédits obtenus</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-3">45/60</h1>
+                <p>Crédits obtenus</p>
+                <h1 class="box-title">45/60</h1>
               </div>
             </div>
           </div>
@@ -361,8 +337,8 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
               <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Cours aujourd'hui</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">2</h1>
+                <p>Cours aujourd'hui</p>
+                <h1 class="box-title">2</h1>
               </div>
             </div>
           </div>
@@ -370,15 +346,15 @@
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
               <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Devoirs en retard</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">3</h1>
+                <p>Devoirs en retard</p>
+                <h1 class="box-title">3</h1>
               </div>
             </div>
           </div>
         </div>
 
         <div class="row">
-          <div class="cours bg-light border border-1 border-secondary " style="border-radius: 10px;">
+          <div class="col-md-12 col-lg-6 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
             <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">
@@ -438,8 +414,8 @@
               </div>
             </div>
           </div>
-          <div class="note1 bg-light border border-1 border-secondary " style="border-radius: 10px;">
-            <div class="row px-2 py-3">
+          <div class="col-md-12 col-lg-5 col-sm-12 mt-2 mx-lg-3 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
               <div class="row align-items-center">
                 <div class="col-3 d-flex align-items-center">
                   <i class="bi px-2 fs-5 fw-bold bi-trophy"></i>
@@ -449,100 +425,102 @@
                 </div>
               </div>
             </div>
-            <div class="row p-2">
-              <div class="row note p-1 mx-2 mb-2">
-                <div class="col-8 text-start">
-                  <h1 class="fs-5 fw-bold">Mathématiques</h1>
-                  <p>Examen final</p>
+            <div class="">
+              <div class="col">
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Mathématiques</h1>
+                    <p>Examen final</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">16/20</h1>
+                    <p>12/09/25</p>
+                  </div>
                 </div>
-                <div class="col-4 text-end">
-                  <h1 class="text-success fs-5 fw-bold">16/20</h1>
-                  <p>12/09/25</p>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Physique</h1>
+                    <p>Projet</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-success fs-5 fw-bold">18/20</h1>
+                    <p>09/09/25</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row note p-1 mx-2 mb-2">
-                <div class="col-8 text-start">
-                  <h1 class="fs-5 fw-bold">Physique</h1>
-                  <p>Projet</p>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Informatique</h1>
+                    <p>TP Java</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">15/20</h1>
+                    <p>05/09/25</p>
+                  </div>
                 </div>
-                <div class="col-4 text-end">
-                  <h1 class="text-success fs-5 fw-bold">18/20</h1>
-                  <p>09/09/25</p>
-                </div>
-              </div>
-              <div class="row note p-1 mx-2 mb-2">
-                <div class="col-8 text-start">
-                  <h1 class="fs-5 fw-bold">Informatique</h1>
-                  <p>TP Java</p>
-                </div>
-                <div class="col-4 text-end">
-                  <h1 class="text-danger fs-5 fw-bold">15/20</h1>
-                  <p>05/09/25</p>
-                </div>
-              </div>
-              <div class="row note p-1 mx-2 mb-2">
-                <div class="col-8 text-start">
-                  <h1 class="fs-5 fw-bold">Anglais</h1>
-                  <p>Oral</p>
-                </div>
-                <div class="col-4 text-end">
-                  <h1 class="text-danger fs-5 fw-bold">14/20</h1>
-                  <p>01/09/25</p>
+                <div class="row note p-1 mx-2 mb-2">
+                  <div class="col-8 text-start">
+                    <h1 class="fs-5 fw-bold">Anglais</h1>
+                    <p>Oral</p>
+                  </div>
+                  <div class="col-4 text-end">
+                    <h1 class="text-danger fs-5 fw-bold">14/20</h1>
+                    <p>01/09/25</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-12 my-2 mx-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-              <div class="px-2 py-3">
-                <div class="row">
-                  <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
-                </div>
+        </div>
+        <div class="row">
+          <div class="col-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
+            <div class="px-2 py-3">
+              <div class="row">
+                <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
               </div>
-              <div class="">
-                <div class="row p-2">
-                  <div class="col-md-6 col-12 py-2 mb-3">
-                    <div class="row">
-                      <h1 class="text-start fs-5 fs-bold">Physique</h1>
-                    </div>
-                    <div class="progress" style="height: 10px; border-radius:5px;">
-                      <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100">
-                        75%
-                      </div>
+            </div>
+            <div class="">
+              <div class="row p-2">
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Physique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                      aria-valuemin="0" aria-valuemax="100">
+                      75%
                     </div>
                   </div>
-                  <div class="col-md-6 col-12 py-2 mb-3">
-                    <div class="row">
-                      <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
-                    </div>
-                    <div class="progress" style="height: 10px; border-radius:5px;">
-                      <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
-                        aria-valuemin="0" aria-valuemax="100">
-                        60%
-                      </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100">
+                      60%
                     </div>
                   </div>
-                  <div class="col-md-6 col-12 py-2 mb-3">
-                    <div class="row">
-                      <h1 class="text-start fs-5 fs-bold">Anglais</h1>
-                    </div>
-                    <div class="progress" style="height: 10px; border-radius:5px;">
-                      <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                        aria-valuemin="0" aria-valuemax="100">
-                        80%
-                      </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Anglais</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100">
+                      80%
                     </div>
                   </div>
-                  <div class="col-md-6 col-12 py-2 mb-3">
-                    <div class="row">
-                      <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
-                    </div>
-                    <div class="progress" style="height: 10px; border-radius:5px;">
-                      <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                        aria-valuemin="0" aria-valuemax="100">
-                        50%
-                      </div>
+                </div>
+                <div class="col-md-6 col-12 py-2 mb-3">
+                  <div class="row">
+                    <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
+                  </div>
+                  <div class="progress" style="height: 10px; border-radius:5px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                      aria-valuemin="0" aria-valuemax="100">
+                      50%
                     </div>
                   </div>
                 </div>
@@ -550,46 +528,47 @@
             </div>
           </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- End Container fluid  -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer h-100 text-dark text-center fw-bold">
-          2025 © DevJustus
-          <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
       </div>
       <!-- ============================================================== -->
-      <!-- End Page wrapper  -->
+      <!-- End Container fluid  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- footer -->
+      <!-- ============================================================== -->
+      <footer class="footer h-100 text-dark text-center fw-bold">
+        2025 © DevJustus
+        <a href="<?= base_url() ?>https://www.wrappixel.com/">EduPlatform</a>
+      </footer>
+      <!-- ============================================================== -->
+      <!-- End footer -->
       <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
-    <!-- End Wrapper -->
+    <!-- End Page wrapper  -->
     <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="<?= base_url() ?>js/app-style-switcher.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
-    <!--Wave Effects -->
-    <script src="<?= base_url() ?>js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="<?= base_url() ?>js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="<?= base_url() ?>js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Wrapper -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- All Jquery -->
+  <!-- ============================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap tether Core JavaScript -->
+  <script src="<?= base_url() ?>js/app-style-switcher.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <!--Wave Effects -->
+  <script src="<?= base_url() ?>js/waves.js"></script>
+  <!--Menu sidebar -->
+  <script src="<?= base_url() ?>js/sidebarmenu.js"></script>
+  <!--Custom JavaScript -->
+  <script src="<?= base_url() ?>js/custom.js"></script>
+  <!--This page JavaScript -->
+  <!--chartis chart-->
+  <script src="<?= base_url() ?>plugins/bower_components/chartist/dist/chartist.min.js"></script>
+  <script src="<?= base_url() ?>plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+  <script src="<?= base_url() ?>js/pages/dashboards/dashboard1.js"></script>
 
 </body>
 
