@@ -27,7 +27,6 @@ $routes->get('dashboard/teacher/gestion', 'Dashteach::gestion');
 $routes->post('dashboard/admin/index', 'Dashadmin::index');
 $routes->get('dashboard/admin/index', 'Dashadmin::index');
 $routes->get('dashboard/admin/notes', 'Dashadmin::notes');
-$routes->get('dashboard/admin/profile', 'Dashadmin::profile');
 $routes->get('dashboard/admin/cours', 'Dashadmin::cours');
 $routes->get('dashboard/admin/teacher', 'Dashadmin::teacher');
 $routes->get('dashboard/admin/student', 'Dashadmin::student');

@@ -9,11 +9,6 @@ class Dashadmin extends BaseController
         return view('dashboard/admin/index');
     }
 
-    public function profile(): string
-    {
-        return view('dashboard/admin/profile');
-    }
-
     public function notes(): string
     {
         return view('dashboard/admin/notes');

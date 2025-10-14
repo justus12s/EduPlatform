@@ -26,11 +26,12 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     .present {
-      background-color: rgba(135, 122, 170, 0.1);
-      border-radius: 20px;
+      background-color: white;
+      border-radius: 10px;
       padding: 10px;
-      margin: 5px;
-      width: 23%;
+      margin: 7px;
+      width: 24%;
+      height: 150px;
     }
 
     .icon-big {
@@ -63,17 +64,6 @@
 
     .present:hover {
       transform: translateY(-5px);
-    }
-
-    .info {
-      background-color: rgba(99, 54, 223, 0.5);
-      border-radius: 20px;
-      color: white;
-      margin: 20px 10px 10px 10px;
-      padding: 20px 10px 0 20px;
-      font-family: "Manrope", sans-serif;
-      font-size: large;
-      font-weight: bold;
     }
 
     .coul {
@@ -141,7 +131,7 @@
         display: none;
       }
 
-      .page-wrapper {
+      .page-wrapper bg-light {
         margin-left: 0 !important;
         padding-left: 0 !important;
       }
@@ -173,7 +163,7 @@
           <!-- ============================================================== -->
           <!-- Logo -->
           <!-- ============================================================== -->
-          <a class="logo-text" href="<?= site_url() ?>dashboard/etudiant/index">
+          <a class="logo-text" href="<?= site_url() ?>dashboard/admin/index">
             <!-- Logo icon -->
             <b class="favicon">
               <!-- Dark Logo icon -->
@@ -203,7 +193,7 @@
                   <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
                 </div>
                 <div class="col">
-                  <a href="<?= site_url() ?>dashboard/etudiant/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
+                  <a href="<?= site_url() ?>dashboard/admin/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
                 </div>
               </div>
             </li>
@@ -215,7 +205,7 @@
     <div class="hear">
       <nav class="navbar navbar-expand-lg bg-secondary shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/etudiant/index">
+          <a class="navbar-brand fw-bold" href="<?= site_url() ?>dashboard/admin/index">
             <i class="far fa-clock me-1"></i> Tableau de bord
           </a>
 
@@ -227,18 +217,23 @@
           <div class="collapse navbar-collapse" id="mainNavbarMobile">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/profile">
-                  <i class="fa fa-user me-1"></i> Profil
+                <a class="nav-link" href="<?= site_url() ?>dashboard/admin/student">
+                  <i class="fa fa-user me-1"></i> Etudiant
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/cours">
-                  <i class="fa fa-book me-1"></i> Mes cours
+                <a class="nav-link" href="<?= site_url() ?>dashboard/admin/cours">
+                  <i class="fa fa-book me-1"></i> Cours
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?= site_url() ?>dashboard/etudiant/notes">
-                  <i class="fa fa-font me-1"></i> Mes notes
+                <a class="nav-link" href="<?= site_url() ?>dashboard/admin/notes">
+                  <i class="fa fa-font me-1"></i> Notes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="<?= site_url() ?>dashboard/admin/teacher">
+                  <i class="fa fa-font me-1"></i> Enseignant
                 </a>
               </li>
               <li class="nav-item">
@@ -258,30 +253,37 @@
           <ul id="sidebarnav">
             <li class="sidebar-item pt-2">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/etudiant/index" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/admin/index" aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Tableau de bord</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/etudiant/profile" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/admin/student" aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="hide-menu">Profil</span>
+                <span class="hide-menu">Etudiant</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/etudiant/cours" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/admin/cours" aria-expanded="false">
                 <i class="fa fa-table" aria-hidden="true"></i>
-                <span class="hide-menu">Mes cours</span>
+                <span class="hide-menu">Cours</span>
               </a>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                href="<?= site_url() ?>dashboard/etudiant/notes" aria-expanded="false">
+                href="<?= site_url() ?>dashboard/admin/notes" aria-expanded="false">
                 <i class="fa fa-font" aria-hidden="true"></i>
-                <span class="hide-menu">Mes notes</span>
+                <span class="hide-menu">Notes</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                href="<?= site_url() ?>dashboard/admin/teacher" aria-expanded="false">
+                <i class="fa fa-font" aria-hidden="true"></i>
+                <span class="hide-menu">Enseignant</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -303,24 +305,10 @@
         </nav>
       </div>
     </aside>
-    <div class="page-wrapper">
-      <div class="info">
-        <div class="row">
-          <div class="col-lg-9 col-md-8 col-8">
-            <h2>Marie Dubois</h2>
-            <p>ID : 81020STI24</p>
-            <p>Ingénieur GMM 1 Semestre 5</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-4">
-            <h3>Moyenne générale</h3>
-            <h1>15.6/20</h1>
-          </div>
-        </div>
-        <!-- /.col-lg-12 -->
-      </div>
+    <div class="page-wrapper bg-light">
       <div class="container-fluid w-100 text-center">
         <div class="row">
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-lg-3 col-md-12 present ms-0 border border-2">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
               <div class="col-lg-10 col-8">
@@ -329,7 +317,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-lg-3 col-md-12 present border border-2">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
               <div class="col-lg-10 col-8">
@@ -338,7 +326,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-lg-3 col-md-12 present border border-2">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
               <div class="col-lg-10 col-8">
@@ -347,7 +335,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present">
+          <div class="col-lg-3 col-md-12 present me-0 border border-2">
             <div class="row">
               <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
               <div class="col-lg-10 col-8">
@@ -358,180 +346,18 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-md-12 col-lg-6 mx-lg-3 col-sm-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row align-items-center">
-                <div class="col-3 d-flex align-items-center">
-                  <i class="bi px-2 fs-5 fw-bold bi-calendar-date"></i>
-                </div>
-                <div class="col-5">
-                  <h1 class="fs-5 fw-bold mb-0">Cours d'aujourd'hui</h1>
-                </div>
-                <div class="col-4">
-                  <select class="form-select shadow-none">
-                    <option>Octobre 2025</option>
-                    <option>Novembre 2025</option>
-                    <option>Décembre 2025</option>
-                    <option>Janvier 2025</option>
-                    <option>Février 2025</option>
-                    <option>Mars 2025</option>
-                    <option>Avril 2025</option>
-                    <option>Mai 2025</option>
-                    <option>Juin 2025</option>
-                    <option>Juillet 2025</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="col">
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Mathématiques Appliquées</h1>
-                    <p>Cours Magistral</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">08:00-12:00</h1>
-                    <p>Amphi A</p>
-                  </div>
-                </div>
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Physique Qantique</h1>
-                    <p>Travaux Pratiques</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">14:00-15:45</h1>
-                    <p>Salle 205</p>
-                  </div>
-                </div>
-                <div class="row coul p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Algorithmique</h1>
-                    <p>Travaux Dirigés</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="fs-5 fw-bold">16:00-18:00</h1>
-                    <p>Salle Info 1</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-5 col-sm-12 mx-lg-3 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row align-items-center">
-                <div class="col-3 d-flex align-items-center">
-                  <i class="bi px-2 fs-5 fw-bold bi-trophy"></i>
-                </div>
-                <div class="col-9">
-                  <h1 class="fs-5 fw-bold mb-0">Notes récentes</h1>
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <div class="col">
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Mathématiques</h1>
-                    <p>Examen final</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-success fs-5 fw-bold">16/20</h1>
-                    <p>12/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Physique</h1>
-                    <p>Projet</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-success fs-5 fw-bold">18/20</h1>
-                    <p>09/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Informatique</h1>
-                    <p>TP Java</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-danger fs-5 fw-bold">15/20</h1>
-                    <p>05/09/25</p>
-                  </div>
-                </div>
-                <div class="row note p-1 mx-2 mb-2">
-                  <div class="col-8 text-start">
-                    <h1 class="fs-5 fw-bold">Anglais</h1>
-                    <p>Oral</p>
-                  </div>
-                  <div class="col-4 text-end">
-                    <h1 class="text-danger fs-5 fw-bold">14/20</h1>
-                    <p>01/09/25</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 mt-2 bg-light border border-1 border-secondary" style="border-radius: 10px;">
-            <div class="px-2 py-3">
-              <div class="row">
-                <h1 class="text-start fs-5 fw-bold mb-0">Progression du semestre</h1>
-              </div>
-            </div>
-            <div class="">
-              <div class="row p-2">
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Physique</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                      aria-valuemin="0" aria-valuemax="100">
-                      75%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Mathématiques</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 60%;" aria-valuenow="60"
-                      aria-valuemin="0" aria-valuemax="100">
-                      60%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Anglais</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100">
-                      80%
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6 col-12 py-2 mb-3">
-                  <div class="row">
-                    <h1 class="text-start fs-5 fs-bold">Algorithmique</h1>
-                  </div>
-                  <div class="progress" style="height: 10px; border-radius:5px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 50%;" aria-valuenow="50"
-                      aria-valuemin="0" aria-valuemax="100">
-                      50%
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="row text-start border border-2 p-2 rounded-3">
+          <h1 class="fs-4">Activités récentes</h1>
+          <div class="row"></div>
+          <hr>
+          <div class="row"></div>
+          <hr>
+          <div class="row"></div>
+          <hr>
+          <div class="row"></div>
+          <hr>
+          <div class="row"></div>
+          <hr>
         </div>
       </div>
       <!-- ============================================================== -->
