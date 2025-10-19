@@ -24,30 +24,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-K+3Q1fQayjU4xzZRpPjExq2PZ4lMjVrZ9iFlu3+wPP2sMwvL7V5qlkz1rjTP8cZbbXoC1hqM0vQ2Dk8p6f8Ylw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
     .present {
       background-color: white;
       border-radius: 10px;
-      padding: 10px;
+      border-color: rgba(30, 32, 32, 0.6);
+      padding: 2px;
       margin: 7px;
       width: 24%;
-      height: 150px;
+      height: 120px;
     }
 
     .icon-big {
       font-size: 40px;
       font-weight: 700;
-      border-radius: 20%;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(137, 226, 214, 0.2);
-      transition: 0.3s;
-    }
-
-    .icon-big:hover {
-      background-color: rgba(84, 225, 230, 0.4);
     }
 
     .box-title {
@@ -60,6 +51,7 @@
       margin: 0;
       font-size: 16px;
       font-weight: 600;
+      color: rgba(60, 61, 57, 0.7);
     }
 
     .present:hover {
@@ -188,13 +180,8 @@
               " href="<?= base_url() ?>javascript:void(0)"><i class="ti-menu ti-close"></i></a>
           <ul class="navbar-nav ms-auto d-flex align-items-center">
             <li>
-              <div class="row g-0">
-                <div class="col">
-                  <h2 class="text-black fw-bold fs-5 pt-3">Marie Dubois</h2>
-                </div>
-                <div class="col">
-                  <a href="<?= site_url() ?>dashboard/admin/profile"><img src="<?= base_url() ?>plugins/images/users/varun.jpg" width="70" class="img-fluid rounded-circle" /></a>
-                </div>
+              <div class="row me-2">
+                <h2 class="text-black fw-bold fs-5 pt-3">Administration</h2>
               </div>
             </li>
           </ul>
@@ -308,56 +295,88 @@
     <div class="page-wrapper bg-light">
       <div class="container-fluid w-100 text-center">
         <div class="row">
-          <div class="col-lg-3 col-md-12 present ms-0 border border-2">
+          <div class="col-md-12 present ms-0 border border-2">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-primary bi-book"></i></div>
-              <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Cours actifs</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">6</h1>
+              <div class="col-8 ps-5 pt-3">
+                <p class="d-flex align-items-center justify-content-start">Etudiants</p>
+                <h1 class="box-title d-flex align-items-center justify-content-start me-5">1,247</h1>
+                <p class="d-flex justify-content-start align-items-center text-primary fs-3">+12% ce mois</p>
               </div>
+              <div class="col-4 d-flex justify-content-start align-items-center pt-4"><i class="bi icon-big text-primary bi-people"></i></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present border border-2">
+          <div class="col-md-12 present ms-0 border border-2">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-success bi-trophy"></i></div>
-              <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Crédits obtenus</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-3">45/60</h1>
+              <div class="col-8 ps-5 pt-3">
+                <p class="d-flex align-items-center justify-content-start">Cours</p>
+                <h1 class="box-title d-flex align-items-center justify-content-start me-5">86</h1>
+                <p class="d-flex justify-content-start align-items-center text-success fs-3">+3% ce mois</p>
               </div>
+              <div class="col-4 d-flex justify-content-start align-items-center pt-4"><i class="bi icon-big text-success bi-book"></i></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present border border-2">
+          <div class="col-md-12 present ms-0 border border-2">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-blue bi-calendar-date"></i></div>
-              <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Cours aujourd'hui</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">2</h1>
+              <div class="col-8 ps-5 pt-3">
+                <p class="d-flex align-items-center justify-content-start">Enseignats</p>
+                <h1 class="box-title d-flex align-items-center justify-content-start me-5">45</h1>
+                <p class="d-flex justify-content-start align-items-center text-info fs-3">+8% ce mois</p>
               </div>
+              <div class="col-4 d-flex justify-content-start align-items-center pt-4"><i class="bi icon-big text-info bi-mortarboard"></i></div>
             </div>
           </div>
-          <div class="col-lg-3 col-md-12 present me-0 border border-2">
+          <div class="col-md-12 present ms-0 border border-2">
             <div class="row">
-              <div class="col-lg-2 col-4 d-flex align-items-center"><i class="bi px-2 icon-big text-danger bi-clock"></i></div>
-              <div class="col-lg-10 col-8">
-                <p class="d-flex align-items-center justify-content-end">Devoirs en retard</p>
-                <h1 class="box-title d-flex align-items-center justify-content-end me-5">3</h1>
+              <div class="col-8 ps-5 pt-3">
+                <p class="d-flex align-items-center justify-content-start">Session</p>
+                <h1 class="box-title d-flex align-items-center justify-content-start me-5">234</h1>
+                <p class="d-flex justify-content-start align-items-center text-danger fs-3">+15% ce mois</p>
               </div>
+              <div class="col-4 d-flex justify-content-start align-items-center pt-4"><i class="bi icon-big text-danger bi-calendar"></i></div>
             </div>
           </div>
         </div>
 
-        <div class="row text-start border border-2 p-2 rounded-3">
-          <h1 class="fs-4">Activités récentes</h1>
-          <div class="row"></div>
-          <hr>
-          <div class="row"></div>
-          <hr>
-          <div class="row"></div>
-          <hr>
-          <div class="row"></div>
-          <hr>
-          <div class="row"></div>
-          <hr>
+        <div class="row text-start border border-2 p-3 me-2 rounded-3">
+          <div class="row py-4">
+            <h1 class="fs-5 fw-bold">Activités récentes</h1>
+          </div>
+          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+            <div class="col-8">
+              <h1 class="fs-4 fw-bold">Inscription: Marie Dubois</h1>
+              <p class="fs-3">Mathématiques</p>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <p>Il y a 2h</p>
+            </div>
+          </div>
+          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+            <div class="col-8">
+              <h1 class="fs-4 fw-bold">Note: Jean Martin</h1>
+              <p class="fs-3">Physique</p>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <p>Il y a 3h</p>
+            </div>
+          </div>
+          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+            <div class="col-8">
+              <h1 class="fs-4 fw-bold">Cours: Sophie Bernard</h1>
+              <p class="fs-3">Histoire</p>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <p>Il y a 5h</p>
+            </div>
+          </div>
+          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+            <div class="col-8">
+              <h1 class="fs-4 fw-bold">Inscription: Pierre Durrant</h1>
+              <p class="fs-3">Mathématiques</p>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+              <p>Il y a 1j</p>
+            </div>
+          </div>
         </div>
       </div>
       <!-- ============================================================== -->
