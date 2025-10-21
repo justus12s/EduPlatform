@@ -24,7 +24,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-K+3Q1fQayjU4xzZRpPjExq2PZ4lMjVrZ9iFlu3+wPP2sMwvL7V5qlkz1rjTP8cZbbXoC1hqM0vQ2Dk8p6f8Ylw==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <style>
     .present {
       background-color: white;
@@ -341,7 +340,7 @@
           <div class="row py-4">
             <h1 class="fs-5 fw-bold">Activités récentes</h1>
           </div>
-          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+          <div class="row m-2 border border-start-0 border-top-0 border-3 border-success rounded-3">
             <div class="col-8">
               <h1 class="fs-4 fw-bold">Inscription: Marie Dubois</h1>
               <p class="fs-3">Mathématiques</p>
@@ -350,7 +349,7 @@
               <p>Il y a 2h</p>
             </div>
           </div>
-          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+          <div class="row m-2 border border-start-0 border-top-0 border-3 border-success rounded-3">
             <div class="col-8">
               <h1 class="fs-4 fw-bold">Note: Jean Martin</h1>
               <p class="fs-3">Physique</p>
@@ -359,7 +358,7 @@
               <p>Il y a 3h</p>
             </div>
           </div>
-          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+          <div class="row m-2 border border-start-0 border-top-0 border-3 border-success rounded-3">
             <div class="col-8">
               <h1 class="fs-4 fw-bold">Cours: Sophie Bernard</h1>
               <p class="fs-3">Histoire</p>
@@ -368,7 +367,7 @@
               <p>Il y a 5h</p>
             </div>
           </div>
-          <div class="row m-2 border border-start-0 border-top-0 border-3 rounded-3">
+          <div class="row m-2 border border-start-0 border-top-0 border-3 border-success rounded-3">
             <div class="col-8">
               <h1 class="fs-4 fw-bold">Inscription: Pierre Durrant</h1>
               <p class="fs-3">Mathématiques</p>
