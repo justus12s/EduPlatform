@@ -8,6 +8,9 @@ use CodeIgniter\Validation\StrictRules\FileRules;
 use CodeIgniter\Validation\StrictRules\FormatRules;
 use CodeIgniter\Validation\StrictRules\Rules;
 
+// Ajoutez cette ligne pour importer votre classe de règles personnalisées
+use App\Validation\StrongPasswordRules;
+
 class Validation extends BaseConfig
 {
     // --------------------------------------------------------------------
@@ -25,6 +28,8 @@ class Validation extends BaseConfig
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
+        StrongPasswordRules::class, // ← AJOUTEZ CETTE LIGNE
+        \App\Validation\StrongPasswordRules::class,
     ];
 
     /**

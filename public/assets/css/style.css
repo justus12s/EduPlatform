@@ -1,0 +1,285 @@
+/* Styles personnalisés pour EduPlatform */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,1000 1000,0 1000,1000"/></svg>');
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.profile-card:hover {
+    background: linear-gradient(145deg, #dee1ec, #755190);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.profile-card:hover .btn {
+    background: white;
+    color: #667eea;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-blur {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Padding pour la navigation fixe */
+body {
+    padding-top: 76px;
+}
+
+/* Styles pour le footer */
+.footer-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-link:hover {
+    color: #fff !important;
+    transform: translateX(5px);
+    text-decoration: none !important;
+}
+
+.footer-link:hover::before {
+    content: "→";
+    position: absolute;
+    left: -15px;
+    color: #667eea;
+}
+
+.social-links .btn {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background: #667eea !important;
+    border-color: #667eea !important;
+    transform: translateY(-2px);
+}
+
+.newsletter .form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.newsletter .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter .form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #667eea;
+    color: white;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.security-badge .badge {
+    font-size: 0.7rem;
+    padding: 0.4em 0.8em;
+}
+
+/* Animation pour les badges de sécurité */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.security-badge .bg-success {
+    animation: pulse 2s infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-legals {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    .security-badge .badge {
+        display: block;
+        margin: 0.25rem auto;
+        width: fit-content;
+    }
+}
+
+/* Style pour les icônes de contact */
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact li i {
+    margin-top: 0.2rem;
+    min-width: 20px;
+}
+
+/* Auth Styles */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.auth-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.auth-logo {
+    font-size: 1.5rem;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.auth-header h1 {
+    color: #2d3748;
+}
+
+.auth-form .form-control,
+.auth-form .form-select {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.auth-form .form-control:focus,
+.auth-form .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.auth-form .input-group-text {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-right: none;
+}
+
+.auth-form .input-group .form-control {
+    border-left: none;
+}
+
+.toggle-password {
+    cursor: pointer;
+    border-left: none !important;
+    border: 1px solid #e2e8f0;
+    border-left: none;
+}
+
+.auth-divider {
+    position: relative;
+    text-align: center;
+}
+
+.auth-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e2e8f0;
+    z-index: 1;
+}
+
+.auth-divider span {
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+.profile-badge {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.admin-badge {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.teacher-badge {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.student-badge {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 30px 20px;
+        margin: 0 10px;
+    }
+    
+    .auth-container {
+        padding: 60px 0 20px;
+    }
+}
